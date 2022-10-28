@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CA3F841F-5FC8-40C3-A755-A8452651BAFA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_1", "Lesson_1", "{706143D1-45BE-4806-BFF7-FFEBBBE98C1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_2", "Lesson_2", "{62D67BD0-808A-4E7A-B97B-2A33539F6374}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "home-works", "home-works", "{7009F5E6-1C4F-40A9-AB79-7A66804CAB67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lessons", "lessons", "{DBCFDE11-4144-4D23-A49A-98B539124246}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{BE7221C3-720A-4821-9B7A-1F8002CB547C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson_1_ConApp", "src\lessons\Lesson_1\Lesson_1_ConApp\Lesson_1_ConApp.csproj", "{2F34658F-8605-4B33-9B51-C8F68C762D78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F34658F-8605-4B33-9B51-C8F68C762D78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F34658F-8605-4B33-9B51-C8F68C762D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F34658F-8605-4B33-9B51-C8F68C762D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F34658F-8605-4B33-9B51-C8F68C762D78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{706143D1-45BE-4806-BFF7-FFEBBBE98C1D} = {DBCFDE11-4144-4D23-A49A-98B539124246}
+		{62D67BD0-808A-4E7A-B97B-2A33539F6374} = {DBCFDE11-4144-4D23-A49A-98B539124246}
+		{7009F5E6-1C4F-40A9-AB79-7A66804CAB67} = {CA3F841F-5FC8-40C3-A755-A8452651BAFA}
+		{DBCFDE11-4144-4D23-A49A-98B539124246} = {CA3F841F-5FC8-40C3-A755-A8452651BAFA}
+		{BE7221C3-720A-4821-9B7A-1F8002CB547C} = {706143D1-45BE-4806-BFF7-FFEBBBE98C1D}
+		{2F34658F-8605-4B33-9B51-C8F68C762D78} = {706143D1-45BE-4806-BFF7-FFEBBBE98C1D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E51D3AF-5F55-46C0-988B-B0700A22A6B7}
+	EndGlobalSection
+EndGlobal
