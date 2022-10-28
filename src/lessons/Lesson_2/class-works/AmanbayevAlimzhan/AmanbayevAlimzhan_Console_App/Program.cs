@@ -1,4 +1,4 @@
-﻿namespace Surname_Class_Work
+﻿namespace AmanbayevAlimzhan_Console_App
 {
     internal class Program
     {
