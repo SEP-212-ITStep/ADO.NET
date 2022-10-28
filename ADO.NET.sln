@@ -56,7 +56,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmanbayevAlimzhan_Console_A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BexultanovDinmukhammed", "BexultanovDinmukhammed", "{53D1D39C-3EC3-4640-9EC8-C9BB4E7055F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BexultanovDinmukhammed_Console_App", "src\lessons\Lesson_2\class-works\BexultanovDinmukhammed\BexultanovDinmukhammed_Console_App\BexultanovDinmukhammed_Console_App.csproj", "{5C36CC9E-7BC1-47D8-87F1-F4B0C66BF199}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BexultanovDinmukhammed_Console_App", "src\lessons\Lesson_2\class-works\BexultanovDinmukhammed\BexultanovDinmukhammed_Console_App\BexultanovDinmukhammed_Console_App.csproj", "{5C36CC9E-7BC1-47D8-87F1-F4B0C66BF199}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotsenkoDmiytiy", "DotsenkoDmiytiy", "{A413555D-29CF-49AA-A138-1E4B3DDC3E56}"
 EndProject
@@ -90,13 +90,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukmankhakimDarkhan_Console
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SavostyanovKirill_Console_App", "src\lessons\Lesson_2\class-works\SavostyanovKirill\SavostyanovKirill_Console_App\SavostyanovKirill_Console_App.csproj", "{81BDDCB4-9A81-4767-92AB-A98B87811105}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeisenbayNurzhan_Console_App", "src\lessons\Lesson_2\class-works\SeisenbayNurzhan\SeisenbayNurzhan_Console_App\SeisenbayNurzhan_Console_App.csproj", "{F0A4FA04-7C51-48EE-B0E9-F2CEBA925AB6}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SherzayMirvais_Console_App", "src\lessons\Lesson_2\class-works\SherzayMirvais\SherzayMirvais_Console_App\SherzayMirvais_Console_App.csproj", "{D7C935F1-DF3A-451D-89EE-AA94E14B2101}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolovievEgor_Console_App", "src\lessons\Lesson_2\class-works\SolovievEgor\SolovievEgor_Console_App\SolovievEgor_Console_App.csproj", "{1EC48D5F-A8B8-4B7F-8EB9-E7DC0F6A74F7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimurAzhiguzhayev_Console_App", "src\lessons\Lesson_2\class-works\TimurAzhiguzhayev\TimurAzhiguzhayev_Console_App\TimurAzhiguzhayev_Console_App.csproj", "{C049DF27-47A7-404C-9BA6-196433E027D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeisenbayNurzhan_Lesson2", "src\lessons\Lesson_2\class-works\SeisenbayNurzhan\SeisenbayNurzhan_Lesson2\SeisenbayNurzhan_Lesson2.csproj", "{97AFB4D1-59C6-4DD5-B130-FA12310AC6FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -156,10 +156,6 @@ Global
 		{81BDDCB4-9A81-4767-92AB-A98B87811105}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81BDDCB4-9A81-4767-92AB-A98B87811105}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81BDDCB4-9A81-4767-92AB-A98B87811105}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0A4FA04-7C51-48EE-B0E9-F2CEBA925AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0A4FA04-7C51-48EE-B0E9-F2CEBA925AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0A4FA04-7C51-48EE-B0E9-F2CEBA925AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0A4FA04-7C51-48EE-B0E9-F2CEBA925AB6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D7C935F1-DF3A-451D-89EE-AA94E14B2101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D7C935F1-DF3A-451D-89EE-AA94E14B2101}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7C935F1-DF3A-451D-89EE-AA94E14B2101}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -172,6 +168,10 @@ Global
 		{C049DF27-47A7-404C-9BA6-196433E027D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C049DF27-47A7-404C-9BA6-196433E027D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C049DF27-47A7-404C-9BA6-196433E027D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97AFB4D1-59C6-4DD5-B130-FA12310AC6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97AFB4D1-59C6-4DD5-B130-FA12310AC6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97AFB4D1-59C6-4DD5-B130-FA12310AC6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97AFB4D1-59C6-4DD5-B130-FA12310AC6FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,10 +216,10 @@ Global
 		{49749CFF-9EC9-41F7-AF5F-4C55DCAC96C4} = {2DB3C66F-C14F-4B6D-89EE-720A27875CF9}
 		{89EE91FC-09A5-4A78-AD56-59904E6CC56A} = {51705922-453E-46B0-B16B-0FE30D132451}
 		{81BDDCB4-9A81-4767-92AB-A98B87811105} = {9CA68F39-004C-4C67-9F48-71FEAB3C95E9}
-		{F0A4FA04-7C51-48EE-B0E9-F2CEBA925AB6} = {E0FFD6C3-2D21-4A1B-8F5F-D869CBCA85F6}
 		{D7C935F1-DF3A-451D-89EE-AA94E14B2101} = {EE4A73DF-36D1-4855-9C1B-2682B647C6EB}
 		{1EC48D5F-A8B8-4B7F-8EB9-E7DC0F6A74F7} = {10ABBA69-9E12-4A97-B344-8E89709EC7D8}
 		{C049DF27-47A7-404C-9BA6-196433E027D5} = {17BC9EF4-EA95-48B2-9746-CAE8F0779487}
+		{97AFB4D1-59C6-4DD5-B130-FA12310AC6FE} = {E0FFD6C3-2D21-4A1B-8F5F-D869CBCA85F6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E51D3AF-5F55-46C0-988B-B0700A22A6B7}
