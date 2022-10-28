@@ -14,6 +14,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lessons", "lessons", "{DBCFDE11-4144-4D23-A49A-98B539124246}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{BE7221C3-720A-4821-9B7A-1F8002CB547C}"
+	ProjectSection(SolutionItems) = preProject
+		src\lessons\Lesson_1\assets\Введение в ADO.NET.pptx = src\lessons\Lesson_1\assets\Введение в ADO.NET.pptx
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson_1_ConApp", "src\lessons\Lesson_1\Lesson_1_ConApp\Lesson_1_ConApp.csproj", "{2F34658F-8605-4B33-9B51-C8F68C762D78}"
 EndProject
@@ -29,6 +32,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SidorenkoEgor", "SidorenkoE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_2", "Lesson_2", "{0B2001BC-071E-4018-9203-4018E54286A1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SidorenkoEgor_Lesson_2_Home_Work", "src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\SidorenkoEgor_Lesson_2_Home_Work.csproj", "{BCD54221-04C2-40A3-B73E-1B7596F1A23B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AbdukhalikovAsir", "AbdukhalikovAsir", "{4A8E999E-0357-4AB2-8A28-8D3DB5EEB566}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbdukhalikovAsir_Console_App", "src\lessons\Lesson_2\class-works\AbdukhalikovAsir\lesson_1\AbdukhalikovAsir_Console_App\AbdukhalikovAsir_Console_App.csproj", "{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Surname", "Surname", "{AF7DB0D2-94F1-4E83-804A-9B880BB44FB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{C5F03EDF-1555-4C69-9A3C-192619077C77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{A287E0C1-F7E9-4DB6-8D7F-3A856DC24898}"
+	ProjectSection(SolutionItems) = preProject
+		src\home-works\Lesson_2\assets\ADO_NET_ПЗ_Модуль_01_часть_01.pdf = src\home-works\Lesson_2\assets\ADO_NET_ПЗ_Модуль_01_часть_01.pdf
+		src\home-works\Lesson_2\assets\ADO_NET_ПЗ_Модуль_02_часть_01.pdf = src\home-works\Lesson_2\assets\ADO_NET_ПЗ_Модуль_02_часть_01.pdf
+	EndProjectSection
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SidorenkoEgor_Lesson_2_Home_Work", "src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\SidorenkoEgor_Lesson_2_Home_Work.csproj", "{BCD54221-04C2-40A3-B73E-1B7596F1A23B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AleinikovaEkaterina", "AleinikovaEkaterina", "{BD77D7AF-FED3-4D1B-AEF3-4333DF33D1C9}"
@@ -53,6 +71,10 @@ Global
 		{BCD54221-04C2-40A3-B73E-1B7596F1A23B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCD54221-04C2-40A3-B73E-1B7596F1A23B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCD54221-04C2-40A3-B73E-1B7596F1A23B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AB51CB62-BCD7-45B0-9762-3D94F29B7245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AB51CB62-BCD7-45B0-9762-3D94F29B7245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB51CB62-BCD7-45B0-9762-3D94F29B7245}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -75,6 +97,11 @@ Global
 		{284A72BC-4D0D-4BF6-9032-D292DEED0F72} = {0B2001BC-071E-4018-9203-4018E54286A1}
 		{0B2001BC-071E-4018-9203-4018E54286A1} = {7009F5E6-1C4F-40A9-AB79-7A66804CAB67}
 		{BCD54221-04C2-40A3-B73E-1B7596F1A23B} = {284A72BC-4D0D-4BF6-9032-D292DEED0F72}
+		{4A8E999E-0357-4AB2-8A28-8D3DB5EEB566} = {1D4245AD-EC0D-490E-AFBA-3789919B54DE}
+		{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED} = {4A8E999E-0357-4AB2-8A28-8D3DB5EEB566}
+		{AF7DB0D2-94F1-4E83-804A-9B880BB44FB4} = {1D4245AD-EC0D-490E-AFBA-3789919B54DE}
+		{C5F03EDF-1555-4C69-9A3C-192619077C77} = {62D67BD0-808A-4E7A-B97B-2A33539F6374}
+		{A287E0C1-F7E9-4DB6-8D7F-3A856DC24898} = {0B2001BC-071E-4018-9203-4018E54286A1}
 		{BD77D7AF-FED3-4D1B-AEF3-4333DF33D1C9} = {1D4245AD-EC0D-490E-AFBA-3789919B54DE}
 		{AB51CB62-BCD7-45B0-9762-3D94F29B7245} = {BD77D7AF-FED3-4D1B-AEF3-4333DF33D1C9}
 	EndGlobalSection
