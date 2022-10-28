@@ -48,6 +48,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{A287E0
 		src\home-works\Lesson_2\assets\ADO_NET_ПЗ_Модуль_02_часть_01.pdf = src\home-works\Lesson_2\assets\ADO_NET_ПЗ_Модуль_02_часть_01.pdf
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AleinikovaEkaterina", "AleinikovaEkaterina", "{E88EB61C-FB64-4402-B46A-759590724687}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aleinikova_Ekaterina_Console_App", "src\lessons\Lesson_2\class-works\AleinikovaEkaterina\Aleinikova_Ekaterina_Console_App\Aleinikova_Ekaterina_Console_App.csproj", "{B3882D77-75A7-463C-9404-13191F37B165}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +74,10 @@ Global
 		{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3882D77-75A7-463C-9404-13191F37B165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3882D77-75A7-463C-9404-13191F37B165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3882D77-75A7-463C-9404-13191F37B165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3882D77-75A7-463C-9404-13191F37B165}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +101,8 @@ Global
 		{AF7DB0D2-94F1-4E83-804A-9B880BB44FB4} = {1D4245AD-EC0D-490E-AFBA-3789919B54DE}
 		{C5F03EDF-1555-4C69-9A3C-192619077C77} = {62D67BD0-808A-4E7A-B97B-2A33539F6374}
 		{A287E0C1-F7E9-4DB6-8D7F-3A856DC24898} = {0B2001BC-071E-4018-9203-4018E54286A1}
+		{E88EB61C-FB64-4402-B46A-759590724687} = {1D4245AD-EC0D-490E-AFBA-3789919B54DE}
+		{B3882D77-75A7-463C-9404-13191F37B165} = {E88EB61C-FB64-4402-B46A-759590724687}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E51D3AF-5F55-46C0-988B-B0700A22A6B7}
