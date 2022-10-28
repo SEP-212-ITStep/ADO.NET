@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32922.545
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CA3F841F-5FC8-40C3-A755-A8452651BAFA}"
 EndProject
@@ -33,9 +33,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SidorenkoEgor_Lesson_2_Home
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AbdukhalikovAsir", "AbdukhalikovAsir", "{4A8E999E-0357-4AB2-8A28-8D3DB5EEB566}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbdukhalikovAsir_Console_App", "src\lessons\Lesson_2\class-works\AbdukhalikovAsir\lesson_1\AbdukhalikovAsir_Console_App\AbdukhalikovAsir_Console_App.csproj", "{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbdukhalikovAsir_Console_App", "src\lessons\Lesson_2\class-works\AbdukhalikovAsir\lesson_1\AbdukhalikovAsir_Console_App\AbdukhalikovAsir_Console_App.csproj", "{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Surname", "Surname", "{AF7DB0D2-94F1-4E83-804A-9B880BB44FB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolovievEgor", "SolovievEgor", "{E40C6B42-FDAA-4BC3-933E-89C151DF2DA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolovievEgor_Console_App", "src\lessons\Lesson_2\class-works\SolovievEgor\SolovievEgor_Console_App\SolovievEgor_Console_App.csproj", "{8554C577-C009-4CD8-99A6-F4FF3187DCFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +63,10 @@ Global
 		{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8554C577-C009-4CD8-99A6-F4FF3187DCFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8554C577-C009-4CD8-99A6-F4FF3187DCFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8554C577-C009-4CD8-99A6-F4FF3187DCFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8554C577-C009-4CD8-99A6-F4FF3187DCFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +88,8 @@ Global
 		{4A8E999E-0357-4AB2-8A28-8D3DB5EEB566} = {1D4245AD-EC0D-490E-AFBA-3789919B54DE}
 		{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED} = {4A8E999E-0357-4AB2-8A28-8D3DB5EEB566}
 		{AF7DB0D2-94F1-4E83-804A-9B880BB44FB4} = {1D4245AD-EC0D-490E-AFBA-3789919B54DE}
+		{E40C6B42-FDAA-4BC3-933E-89C151DF2DA9} = {1D4245AD-EC0D-490E-AFBA-3789919B54DE}
+		{8554C577-C009-4CD8-99A6-F4FF3187DCFC} = {E40C6B42-FDAA-4BC3-933E-89C151DF2DA9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E51D3AF-5F55-46C0-988B-B0700A22A6B7}
