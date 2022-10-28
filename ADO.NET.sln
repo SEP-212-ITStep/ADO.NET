@@ -14,6 +14,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lessons", "lessons", "{DBCFDE11-4144-4D23-A49A-98B539124246}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{BE7221C3-720A-4821-9B7A-1F8002CB547C}"
+	ProjectSection(SolutionItems) = preProject
+		src\lessons\Lesson_1\assets\Введение в ADO.NET.pptx = src\lessons\Lesson_1\assets\Введение в ADO.NET.pptx
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson_1_ConApp", "src\lessons\Lesson_1\Lesson_1_ConApp\Lesson_1_ConApp.csproj", "{2F34658F-8605-4B33-9B51-C8F68C762D78}"
 EndProject
@@ -33,7 +36,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SidorenkoEgor_Lesson_2_Home
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AbdukhalikovAsir", "AbdukhalikovAsir", "{4A8E999E-0357-4AB2-8A28-8D3DB5EEB566}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbdukhalikovAsir_Console_App", "src\lessons\Lesson_2\class-works\AbdukhalikovAsir\lesson_1\AbdukhalikovAsir_Console_App\AbdukhalikovAsir_Console_App.csproj", "{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbdukhalikovAsir_Console_App", "src\lessons\Lesson_2\class-works\AbdukhalikovAsir\lesson_1\AbdukhalikovAsir_Console_App\AbdukhalikovAsir_Console_App.csproj", "{6D595ED6-6F33-4B7C-AA55-2E02ECF4D7ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Surname", "Surname", "{AF7DB0D2-94F1-4E83-804A-9B880BB44FB4}"
 EndProject
