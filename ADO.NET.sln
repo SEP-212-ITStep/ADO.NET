@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32922.545
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CA3F841F-5FC8-40C3-A755-A8452651BAFA}"
 EndProject
@@ -33,6 +33,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_2", "Lesson_2", "{0B2001BC-071E-4018-9203-4018E54286A1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SidorenkoEgor_Lesson_2_Home_Work", "src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\SidorenkoEgor_Lesson_2_Home_Work.csproj", "{BCD54221-04C2-40A3-B73E-1B7596F1A23B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FedotovAnton", "FedotovAnton", "{592FA5D6-EC78-4FDB-A2E0-820AFCCA1E66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FedotovAnton_ConsoleApp1", "src\lessons\Lesson_2\class-works\FedotovAnton\FedotovAnton_ConsoleApp1\FedotovAnton_ConsoleApp1.csproj", "{AB1EB663-944E-4D50-A766-0A70D8476F98}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AbdukhalikovAsir", "AbdukhalikovAsir", "{4A8E999E-0357-4AB2-8A28-8D3DB5EEB566}"
 EndProject
@@ -172,6 +176,10 @@ Global
 		{C049DF27-47A7-404C-9BA6-196433E027D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C049DF27-47A7-404C-9BA6-196433E027D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C049DF27-47A7-404C-9BA6-196433E027D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB1EB663-944E-4D50-A766-0A70D8476F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB1EB663-944E-4D50-A766-0A70D8476F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB1EB663-944E-4D50-A766-0A70D8476F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB1EB663-944E-4D50-A766-0A70D8476F98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -220,6 +228,8 @@ Global
 		{D7C935F1-DF3A-451D-89EE-AA94E14B2101} = {EE4A73DF-36D1-4855-9C1B-2682B647C6EB}
 		{1EC48D5F-A8B8-4B7F-8EB9-E7DC0F6A74F7} = {10ABBA69-9E12-4A97-B344-8E89709EC7D8}
 		{C049DF27-47A7-404C-9BA6-196433E027D5} = {17BC9EF4-EA95-48B2-9746-CAE8F0779487}
+		{592FA5D6-EC78-4FDB-A2E0-820AFCCA1E66} = {1D4245AD-EC0D-490E-AFBA-3789919B54DE}
+		{AB1EB663-944E-4D50-A766-0A70D8476F98} = {592FA5D6-EC78-4FDB-A2E0-820AFCCA1E66}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E51D3AF-5F55-46C0-988B-B0700A22A6B7}
