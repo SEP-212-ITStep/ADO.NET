@@ -42,14 +42,7 @@ namespace DataGridBind
 
             try
             {
-
-            }
-            catch (Exception e)
-            {
-                this.ErrorTextBlock.Text = e.ToString();
-            }
-            /*
-             *   Connection.Open();
+                Connection.Open();
                 _adapter = new SqlDataAdapter("SELECT * FROM  Production.Product p", Connection);
 
                 var dataSet = new DataSet();
@@ -57,7 +50,12 @@ namespace DataGridBind
 
                 ProductDataGrid.ItemsSource = dataSet.Tables[0].DefaultView;
                 _adapter.UpdateCommand = new SqlCommandBuilder(_adapter).GetUpdateCommand();
-             */
+            }
+            catch (Exception e)
+            {
+                this.ErrorTextBlock.Text = e.ToString();
+            }
+
         }
 
         private static object? GetDataFromAssembly(string path)
