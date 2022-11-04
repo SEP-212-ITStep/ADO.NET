@@ -102,7 +102,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_3", "Lesson_3", "{64
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGridBind", "src\lessons\Lesson_3\DataGridBind\DataGridBind.csproj", "{09A592C6-F3A4-4C1B-A481-1B83AF7143B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LukmankhakimDarkhan_Console_App_Lesson_3", "LukmankhakimDarkhan_Console_App_Lesson_3\LukmankhakimDarkhan_Console_App_Lesson_3.csproj", "{BC62975D-5838-40DA-BAE9-403EC15728B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukmankhakimDarkhan_Console_App_Lesson_3", "LukmankhakimDarkhan_Console_App_Lesson_3\LukmankhakimDarkhan_Console_App_Lesson_3.csproj", "{BC62975D-5838-40DA-BAE9-403EC15728B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LukmankhakimDarkhan_Console_App_Lesson_4", "src\lessons\Lesson_2\class-works\LukmankhakimDarkhan\LukmankhakimDarkhan_Console_App_Lesson_4\LukmankhakimDarkhan_Console_App_Lesson_4.csproj", "{8BC5F0B2-3E01-4176-8B71-19E222FA5429}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -186,6 +188,10 @@ Global
 		{BC62975D-5838-40DA-BAE9-403EC15728B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC62975D-5838-40DA-BAE9-403EC15728B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC62975D-5838-40DA-BAE9-403EC15728B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BC5F0B2-3E01-4176-8B71-19E222FA5429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC5F0B2-3E01-4176-8B71-19E222FA5429}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC5F0B2-3E01-4176-8B71-19E222FA5429}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC5F0B2-3E01-4176-8B71-19E222FA5429}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -237,6 +243,7 @@ Global
 		{6454C849-9555-4F77-9D9F-C6A4C0A9543B} = {DBCFDE11-4144-4D23-A49A-98B539124246}
 		{09A592C6-F3A4-4C1B-A481-1B83AF7143B6} = {6454C849-9555-4F77-9D9F-C6A4C0A9543B}
 		{BC62975D-5838-40DA-BAE9-403EC15728B6} = {51705922-453E-46B0-B16B-0FE30D132451}
+		{8BC5F0B2-3E01-4176-8B71-19E222FA5429} = {51705922-453E-46B0-B16B-0FE30D132451}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E51D3AF-5F55-46C0-988B-B0700A22A6B7}
