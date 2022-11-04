@@ -38,6 +38,7 @@ namespace ef_core
                     UpdateBlog();
                     break;
                 case 3:
+                    DeleteBlog();
                     break;
                 case 4:
                     ShowAllData();
@@ -46,7 +47,22 @@ namespace ef_core
                     break;
             }
         }
+        public static void DeleteBlog()
+        {
+            Console.Write("Введите идентификатор для удаления:");
+            var id = int.Parse(Console.ReadLine()
+                ??
+                throw new InvalidOperationException("Вы ничего не ввели!!!"));
+            
+            using var dbContext = new BloggingContext();
 
+            var blog = dbContext.Blogs.First(f => f.Id == id);
+            dbContext.Blogs.Remove(blog);
+            dbContext.SaveChanges();
+            Console.WriteLine("Изменения внесены успешно.");
+            Thread.Sleep(3000);
+            SwitchMenu(ShowMenu());
+        }
         public static void UpdateBlog()
         {
             Console.Write("Введите идентификатор:");
