@@ -15,6 +15,7 @@ namespace DataGridBind.Data
             {
                 using var sqlConnection = new SqlConnection(connectionString);
                 sqlConnection.Open();
+
                 using var sqlCmd = sqlConnection.CreateCommand();
                 sqlCmd.CommandText = sql;
                 using var sqlDataReader = sqlCmd.ExecuteReader();
