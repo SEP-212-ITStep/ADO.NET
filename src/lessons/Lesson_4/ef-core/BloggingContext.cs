@@ -14,7 +14,7 @@ namespace ef_core
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             builder.UseSqlServer("Server=LAPTOP-EGOR\\EGOR_SQL_SERVER;Database=BlogDb;" +
-                "Trusted_Connection=true;Encrypt=false");
+                                 "Trusted_Connection=true;Encrypt=false");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
