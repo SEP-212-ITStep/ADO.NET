@@ -6,11 +6,11 @@ namespace ef_core
     {
         static void Main(string[] args)
         {
-            // 1. Добавить блог
-            // 2. Обновить контент блога
-            // 3. Удалить
-            // 4. Показать всё
-           
+        // 1. Добавить блог
+        // 2. Обновить контент блога
+        // 3. Удалить
+        // 4. Показать всё
+        label:
             try
             {
                 var number = ShowMenu();
@@ -19,6 +19,8 @@ namespace ef_core
             catch (Exception e)
             {
                 Console.WriteLine(e);
+                Console.ReadLine();
+                goto label;
             }
         }
         public static void SwitchMenu(int number)
@@ -33,6 +35,7 @@ namespace ef_core
                     AddNewBlog(authorName, blogContent);
                     break;
                 case 2:
+                    UpdateBlog();
                     break;
                 case 3:
                     break;
@@ -43,6 +46,28 @@ namespace ef_core
                     break;
             }
         }
+
+        public static void UpdateBlog()
+        {
+            Console.Write("Введите идентификатор:");
+            var id = int.Parse(Console.ReadLine()
+                ??
+                throw new InvalidOperationException("Вы ничего не ввели!!!"));
+
+            using var dbContext = new BloggingContext();
+
+            var blog = dbContext.Blogs.First(f => f.Id == id);
+
+            Console.WriteLine("Измените контент:");
+            var newContent = Console.ReadLine();
+            blog.Content = newContent;
+            dbContext.SaveChanges();
+            
+            Console.WriteLine("Изменения внесены успешно.");
+            Thread.Sleep(2000);
+            SwitchMenu(ShowMenu());
+        }
+
         public static int ShowMenu()
         {
             Console.Clear();
@@ -88,6 +113,8 @@ namespace ef_core
                 Console.WriteLine($"{blog.AuthorName} - {blog.Content}, " +
                     $"Like count - {blog.LikeCount}");
             }
+            Console.ReadLine();
+            SwitchMenu(ShowMenu());
         }
     }
 }
