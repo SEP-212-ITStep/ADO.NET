@@ -8,6 +8,7 @@ namespace connectedMode
 {
     internal class product
     {
+        public int Id { get; set; } 
         public string Name { get; set; }
         public string Type { get; set; }
         public provider Provider { get; set; }
@@ -15,6 +16,9 @@ namespace connectedMode
         public double Cost { get; set; }
         public DateTime GetDate { get; set; }
 
-
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
