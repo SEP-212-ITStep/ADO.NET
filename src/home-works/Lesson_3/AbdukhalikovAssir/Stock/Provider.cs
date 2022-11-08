@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace connectedMode
+namespace Stock
 {
-    internal class provider
+    internal class Provider
     {
     }
 }

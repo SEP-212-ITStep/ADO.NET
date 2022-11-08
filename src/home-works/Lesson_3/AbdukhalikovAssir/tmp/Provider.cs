@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace connectedMode
+namespace Stock
 {
-    internal class Program
+    internal class Provider
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
