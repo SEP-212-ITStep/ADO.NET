@@ -1,0 +1,15 @@
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\bin\Debug\net6.0\Lesson_1_ConApp.exe
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\bin\Debug\net6.0\Lesson_1_ConApp.deps.json
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\bin\Debug\net6.0\Lesson_1_ConApp.runtimeconfig.json
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\bin\Debug\net6.0\Lesson_1_ConApp.dll
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\bin\Debug\net6.0\Lesson_1_ConApp.pdb
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\obj\Debug\net6.0\Lesson_1_ConApp.csproj.AssemblyReference.cache
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\obj\Debug\net6.0\Lesson_1_ConApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\obj\Debug\net6.0\Lesson_1_ConApp.AssemblyInfoInputs.cache
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\obj\Debug\net6.0\Lesson_1_ConApp.AssemblyInfo.cs
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\obj\Debug\net6.0\Lesson_1_ConApp.csproj.CoreCompileInputs.cache
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\obj\Debug\net6.0\Lesson_1_ConApp.dll
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\obj\Debug\net6.0\refint\Lesson_1_ConApp.dll
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\obj\Debug\net6.0\Lesson_1_ConApp.pdb
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\obj\Debug\net6.0\Lesson_1_ConApp.genruntimeconfig.cache
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\lessons\Lesson_1\Lesson_1_ConApp\obj\Debug\net6.0\ref\Lesson_1_ConApp.dll
