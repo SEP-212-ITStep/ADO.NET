@@ -16,12 +16,12 @@ namespace _28102022_homeworl_ADO.NET
         //■ Вставка новых типов товаров;
         //■ Вставка новых поставщиков.
 
-        public static void connectToDB()
+        public static void getGoods()
         {
-            const string connectionString = "Server=KCELL50787\\MSSQLSERVER2;Database=Shop;User Id=sa;Password=Qwerty123!;Encrypt=false;";
+            const string connectionString = "Server=KCELL50787\\MSSQLSERVER2;Database=warehouse;User Id=sa;Password=Qwerty123!;Encrypt=false;";
             try
             {
-                const string SqlQuerty = "SELECT [name],[id],[price],[quantity] FROM dbo.Inventory";
+                const string SqlQuerty = "SELECT [good's name],[type],[quantity],[cost],[delivery date] FROM dbo.goods";
 
                 using var sqlConnection = new SqlConnection(connectionString);
                 sqlConnection.Open();
@@ -30,13 +30,66 @@ namespace _28102022_homeworl_ADO.NET
                 using var reader = sqlCommand.ExecuteReader();
                 while (reader.Read())
                 {
-                    var name = reader["name"].ToString();
-                    var id = reader["id"].ToString();
-                    var price = reader["price"].ToString();
+                    var goodSName = reader["good's name"].ToString();
+                    var type = reader["type"].ToString();
                     var quantity = reader["quantity"].ToString();
-                    //var Calories = Double.Parse(reader["Calories"]);
+                    var cost = reader["cost"].ToString();
+                    var deliveryDate = reader["delivery date"].ToString();
 
-                    Console.WriteLine($"[name - {name},id - {id}, price - {price}, quantity - {quantity}]");
+                    Console.WriteLine($"[good's name - {goodSName}, type - {type}, quantity - {quantity}, cost - {cost}, delivery date - {deliveryDate}]");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }  
+        public static void getSuppliers()
+        {
+            const string connectionString = "Server=KCELL50787\\MSSQLSERVER2;Database=warehouse;User Id=sa;Password=Qwerty123!;Encrypt=false;";
+            try
+            {
+                const string SqlQuerty = "SELECT [good's name],[type],[supplier],[delivery date] FROM dbo.suppliers";
+
+                using var sqlConnection = new SqlConnection(connectionString);
+                sqlConnection.Open();
+                Console.WriteLine("Connection is opened");
+                using var sqlCommand = new SqlCommand(SqlQuerty, sqlConnection);
+                using var reader = sqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    var goodSName = reader["good's name"].ToString();
+                    var type = reader["type"].ToString();
+                    var supplier = reader["supplier"].ToString();
+                    var deliveryDate = reader["delivery date"].ToString();
+
+                    Console.WriteLine($"[good's name - {goodSName}, type - {type}, supplier - {supplier}, delivery date - {deliveryDate}]");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }    
+        public static void getTypes()
+        {
+            const string connectionString = "Server=KCELL50787\\MSSQLSERVER2;Database=warehouse;User Id=sa;Password=Qwerty123!;Encrypt=false;";
+            try
+            {
+                const string SqlQuerty = "SELECT [good's name],[type],[quantity] FROM dbo.types";
+
+                using var sqlConnection = new SqlConnection(connectionString);
+                sqlConnection.Open();
+                Console.WriteLine("Connection is opened");
+                using var sqlCommand = new SqlCommand(SqlQuerty, sqlConnection);
+                using var reader = sqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    var goodSName = reader["good's name"].ToString();
+                    var type = reader["type"].ToString();
+                    var quantity = reader["quantity"].ToString();
+
+                    Console.WriteLine($"[good's name - {goodSName}, type - {type}, quantity - {quantity}]");
                 }
             }
             catch (Exception e)
@@ -44,26 +97,16 @@ namespace _28102022_homeworl_ADO.NET
                 Console.WriteLine(e.Message);
             }
         }
-        public static void UpdateAddNewItem(string name1,int price1, int quantity1)
+        public static void AddNewRow(string name1,int price1, int quantity1)
         {
-            const string connectionString = "Server=KCELL50787\\MSSQLSERVER2;Database=Shop;User Id=sa;Password=Qwerty123!;Encrypt=false;";
+            const string connectionString = "Server=KCELL50787\\MSSQLSERVER2;Database=warehouse;User Id=sa;Password=Qwerty123!;Encrypt=false;";
             try
             {
-                //const string SqlQuerty = "SELECT [id],[price],[quantity] FROM dbo.Inventory";
-
                 using var sqlConnection = new SqlConnection(connectionString);
                 sqlConnection.Open();
                 Console.WriteLine("Connection is opened");
-                //string buf1 = id1.ToString();
                 string buf2 = price1.ToString();
                 string buf3 = quantity1.ToString();
-
-                //string sql = string.Format("INSERT INTO  dbo.Inventory ('name', 'price', 'quantity') VALUES {0} {1} {2}", name1, buf2, buf3);
-
-                //INSERT INTO  dbo.Inventory('name', 'price', 'quantity') VALUES { 0}
-                //{ 1}
-                //{ 2}
-                //", name1, buf2, buf3
 
                 string sql = String.Format("INSERT INTO Inventory (name, /*id,*/ price, quantity) VALUES ('{0}',/*'Explicit identity value',*/ {1}, {2})", name1, price1, quantity1);
 
@@ -111,9 +154,13 @@ namespace _28102022_homeworl_ADO.NET
             const string connectionString = "Server=KCELL50787\\MSSQLSERVER2;Database=Shop;User Id=sa;Password=Qwerty123!;Encrypt=false;";
             try
             {
-                connectToDB();
-                AddNewColumn("supplier");
-                AddNewColumn("type");
+                //connectToDB();
+                //AddNewColumn("supplier");
+                //AddNewColumn("type");
+                getGoods();
+                getSuppliers();
+                getTypes();
+
                 //UpdateAddNewItem("hammer",10,2);
             }
             catch (Exception e)
