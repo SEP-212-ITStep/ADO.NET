@@ -108,6 +108,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FinalExam", "FinalExam", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalExam", "src\lessons\FinalExam\AbdukhalikovAssir\FinalExam\FinalExam.csproj", "{FA000E9F-40C1-4332-B8BF-538F3093B0FF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_3", "Lesson_3", "{5F45CE99-06FE-4906-A733-03696F3236BC}"
+	ProjectSection(SolutionItems) = preProject
+		src\lessons\Lesson_3\AbdukhalikovAsir\db.sql = src\lessons\Lesson_3\AbdukhalikovAsir\db.sql
+		src\lessons\Lesson_3\AbdukhalikovAsir\lesson_3.csproj = src\lessons\Lesson_3\AbdukhalikovAsir\lesson_3.csproj
+		src\lessons\Lesson_3\AbdukhalikovAsir\Program.cs = src\lessons\Lesson_3\AbdukhalikovAsir\Program.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_4", "Lesson_4", "{183D0A0D-5271-45F6-AE53-08996263FD58}"
+	ProjectSection(SolutionItems) = preProject
+		src\lessons\Lesson_4\AbdukhalikovAsir\Authorization.cs = src\lessons\Lesson_4\AbdukhalikovAsir\Authorization.cs
+		src\lessons\Lesson_4\AbdukhalikovAsir\lesson_4.csproj = src\lessons\Lesson_4\AbdukhalikovAsir\lesson_4.csproj
+		src\lessons\Lesson_4\AbdukhalikovAsir\Location.cs = src\lessons\Lesson_4\AbdukhalikovAsir\Location.cs
+		src\lessons\Lesson_4\AbdukhalikovAsir\Person.cs = src\lessons\Lesson_4\AbdukhalikovAsir\Person.cs
+		src\lessons\Lesson_4\AbdukhalikovAsir\PersonDbContext.cs = src\lessons\Lesson_4\AbdukhalikovAsir\PersonDbContext.cs
+		src\lessons\Lesson_4\AbdukhalikovAsir\Program.cs = src\lessons\Lesson_4\AbdukhalikovAsir\Program.cs
+		src\lessons\Lesson_4\AbdukhalikovAsir\RootObject.cs = src\lessons\Lesson_4\AbdukhalikovAsir\RootObject.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -243,6 +261,8 @@ Global
 		{880C219B-2887-430F-9D84-F4CCE0DB92F0} = {B01218A2-0EB9-4111-BDAA-A7A51B5E0F42}
 		{9D267773-83E0-47CE-9C17-B50B01474426} = {DBCFDE11-4144-4D23-A49A-98B539124246}
 		{FA000E9F-40C1-4332-B8BF-538F3093B0FF} = {9D267773-83E0-47CE-9C17-B50B01474426}
+		{5F45CE99-06FE-4906-A733-03696F3236BC} = {DBCFDE11-4144-4D23-A49A-98B539124246}
+		{183D0A0D-5271-45F6-AE53-08996263FD58} = {DBCFDE11-4144-4D23-A49A-98B539124246}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E51D3AF-5F55-46C0-988B-B0700A22A6B7}
