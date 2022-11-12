@@ -56,7 +56,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmanbayevAlimzhan_Console_A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BexultanovDinmukhammed", "BexultanovDinmukhammed", "{53D1D39C-3EC3-4640-9EC8-C9BB4E7055F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BexultanovDinmukhammed_Console_App", "src\lessons\Lesson_2\class-works\BexultanovDinmukhammed\BexultanovDinmukhammed_Console_App\BexultanovDinmukhammed_Console_App.csproj", "{5C36CC9E-7BC1-47D8-87F1-F4B0C66BF199}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BexultanovDinmukhammed_Console_App", "src\lessons\Lesson_2\class-works\BexultanovDinmukhammed\BexultanovDinmukhammed_Console_App\BexultanovDinmukhammed_Console_App.csproj", "{5C36CC9E-7BC1-47D8-87F1-F4B0C66BF199}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotsenkoDmiytiy", "DotsenkoDmiytiy", "{A413555D-29CF-49AA-A138-1E4B3DDC3E56}"
 EndProject
@@ -97,6 +97,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolovievEgor_Console_App", "src\lessons\Lesson_2\class-works\SolovievEgor\SolovievEgor_Console_App\SolovievEgor_Console_App.csproj", "{1EC48D5F-A8B8-4B7F-8EB9-E7DC0F6A74F7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimurAzhiguzhayev_Console_App", "src\lessons\Lesson_2\class-works\TimurAzhiguzhayev\TimurAzhiguzhayev_Console_App\TimurAzhiguzhayev_Console_App.csproj", "{C049DF27-47A7-404C-9BA6-196433E027D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Issakov_Jacob_HW_lesson_1", "src\home-works\Lesson_1\Issakov_Jacob_HW_lesson_1\Issakov_Jacob_HW_lesson_1.csproj", "{8ED465A1-1A6B-4466-A529-B5E7F95EDE32}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Issakov_Jacob_HW_2", "src\home-works\Lesson_2\Issakov_Jacob_HW_lesson_2\Issakov_Jacob_HW_2\Issakov_Jacob_HW_2.csproj", "{6690C4A8-B26B-417A-A0BB-1C10808A0CFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FinalExam", "FinalExam", "{FED9E526-513D-4A85-B7EA-6FAE457D4148}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Issakov_Jacob_Final_Exam", "src\lessons\FinalExam\Issakov_Jacob_Final_Exam\Issakov_Jacob_Final_Exam.csproj", "{686D4C1F-025B-4C02-B136-F9B8332676F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -172,6 +180,18 @@ Global
 		{C049DF27-47A7-404C-9BA6-196433E027D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C049DF27-47A7-404C-9BA6-196433E027D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C049DF27-47A7-404C-9BA6-196433E027D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ED465A1-1A6B-4466-A529-B5E7F95EDE32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ED465A1-1A6B-4466-A529-B5E7F95EDE32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ED465A1-1A6B-4466-A529-B5E7F95EDE32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ED465A1-1A6B-4466-A529-B5E7F95EDE32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6690C4A8-B26B-417A-A0BB-1C10808A0CFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6690C4A8-B26B-417A-A0BB-1C10808A0CFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6690C4A8-B26B-417A-A0BB-1C10808A0CFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6690C4A8-B26B-417A-A0BB-1C10808A0CFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{686D4C1F-025B-4C02-B136-F9B8332676F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{686D4C1F-025B-4C02-B136-F9B8332676F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{686D4C1F-025B-4C02-B136-F9B8332676F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{686D4C1F-025B-4C02-B136-F9B8332676F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -220,6 +240,10 @@ Global
 		{D7C935F1-DF3A-451D-89EE-AA94E14B2101} = {EE4A73DF-36D1-4855-9C1B-2682B647C6EB}
 		{1EC48D5F-A8B8-4B7F-8EB9-E7DC0F6A74F7} = {10ABBA69-9E12-4A97-B344-8E89709EC7D8}
 		{C049DF27-47A7-404C-9BA6-196433E027D5} = {17BC9EF4-EA95-48B2-9746-CAE8F0779487}
+		{8ED465A1-1A6B-4466-A529-B5E7F95EDE32} = {F6F4752F-8787-4A2C-9145-053ADB99C712}
+		{6690C4A8-B26B-417A-A0BB-1C10808A0CFD} = {0B2001BC-071E-4018-9203-4018E54286A1}
+		{FED9E526-513D-4A85-B7EA-6FAE457D4148} = {DBCFDE11-4144-4D23-A49A-98B539124246}
+		{686D4C1F-025B-4C02-B136-F9B8332676F3} = {FED9E526-513D-4A85-B7EA-6FAE457D4148}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E51D3AF-5F55-46C0-988B-B0700A22A6B7}
