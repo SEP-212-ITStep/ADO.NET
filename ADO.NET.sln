@@ -106,7 +106,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stock", "src\home-works\Les
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FinalExam", "FinalExam", "{9D267773-83E0-47CE-9C17-B50B01474426}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalExam", "src\lessons\FinalExam\AbdukhalikovAssir\FinalExam\FinalExam.csproj", "{FA000E9F-40C1-4332-B8BF-538F3093B0FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalExam", "src\lessons\FinalExam\AbdukhalikovAssir\FinalExam\FinalExam.csproj", "{FA000E9F-40C1-4332-B8BF-538F3093B0FF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_3", "Lesson_3", "{5F45CE99-06FE-4906-A733-03696F3236BC}"
 	ProjectSection(SolutionItems) = preProject
