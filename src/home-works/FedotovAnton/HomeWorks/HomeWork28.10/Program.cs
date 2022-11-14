@@ -10,7 +10,7 @@ namespace HomeWork28._10
 {
     internal class Program
     {
-        const string connectionString = "Server=AMIKAN;Database=vegetables and fruits;Trusted_Connection=true;Encrypt=false;";
+        const string connectionString = "Server=AMIKAN;Database=vegetables&fruits;Trusted_Connection=true;Encrypt=false;";
         private static void Main(string[] args)
         {
             try
