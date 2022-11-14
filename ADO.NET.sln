@@ -108,7 +108,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGridBind.Data", "src\le
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson_3_ClassWork", "src\lessons\Lesson_2\class-works\SidorenkoEgor\Lesson_3_ClassWork\Lesson_3_ClassWork.csproj", "{A508303B-B15F-4DF3-AEF4-8098B093FECB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FedotovAnton_ConsoleApp3", "src\lessons\Lesson_2\class-works\FedotovAnton\FedotovAnton_ConsoleApp3\FedotovAnton_ConsoleApp3.csproj", "{6D44D616-3E2A-40CE-A7AB-33529854DEFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FedotovAnton_ConsoleApp3", "src\lessons\Lesson_2\class-works\FedotovAnton\FedotovAnton_ConsoleApp3\FedotovAnton_ConsoleApp3.csproj", "{6D44D616-3E2A-40CE-A7AB-33529854DEFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FedotovAnton", "FedotovAnton", "{838CBF6E-7895-4A13-BB52-52B3E080E494}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWorks", "HomeWorks", "{765CB64B-74E4-4FEC-96DA-F1E6196289A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork28.10", "src\home-works\FedotovAnton\HomeWorks\HomeWork28.10\HomeWork28.10.csproj", "{1BAEB730-AF53-4A5E-8ED1-F2B153996E22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -204,6 +210,10 @@ Global
 		{6D44D616-3E2A-40CE-A7AB-33529854DEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D44D616-3E2A-40CE-A7AB-33529854DEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D44D616-3E2A-40CE-A7AB-33529854DEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BAEB730-AF53-4A5E-8ED1-F2B153996E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BAEB730-AF53-4A5E-8ED1-F2B153996E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BAEB730-AF53-4A5E-8ED1-F2B153996E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BAEB730-AF53-4A5E-8ED1-F2B153996E22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -258,6 +268,9 @@ Global
 		{901436F3-EEF9-4059-B343-F86BC62EA1BC} = {6454C849-9555-4F77-9D9F-C6A4C0A9543B}
 		{A508303B-B15F-4DF3-AEF4-8098B093FECB} = {962BEBA8-15CA-43D6-9B38-6AAA7B9DC47D}
 		{6D44D616-3E2A-40CE-A7AB-33529854DEFD} = {592FA5D6-EC78-4FDB-A2E0-820AFCCA1E66}
+		{838CBF6E-7895-4A13-BB52-52B3E080E494} = {7009F5E6-1C4F-40A9-AB79-7A66804CAB67}
+		{765CB64B-74E4-4FEC-96DA-F1E6196289A4} = {838CBF6E-7895-4A13-BB52-52B3E080E494}
+		{1BAEB730-AF53-4A5E-8ED1-F2B153996E22} = {765CB64B-74E4-4FEC-96DA-F1E6196289A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E51D3AF-5F55-46C0-988B-B0700A22A6B7}
