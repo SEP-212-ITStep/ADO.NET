@@ -118,11 +118,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "practical-task-by-Nurik", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_6", "Lesson_6", "{F53330EF-C945-4BAD-A03A-5F89A68EA9B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Db-First-Approach", "src\lessons\Lesson_6\Db-First-Approach\Db-First-Approach.csproj", "{989376E0-BC8A-4858-A6AF-D22BBEEAD386}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Db-First-Approach", "src\lessons\Lesson_6\Db-First-Approach\Db-First-Approach.csproj", "{989376E0-BC8A-4858-A6AF-D22BBEEAD386}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exam", "Exam", "{39156793-1F1D-4F52-8E65-2B41E2E5F6EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nurik-Exam", "src\lessons\Exam\Nurik-Exam\Nurik-Exam.csproj", "{750F8ED8-1219-4E57-AB2A-510AF4F904EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nurik-Exam", "src\lessons\Exam\Nurik-Exam\Nurik-Exam.csproj", "{750F8ED8-1219-4E57-AB2A-510AF4F904EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SidorenkoEgor", "SidorenkoEgor", "{2B08F53C-3C1E-4E98-B0E5-B31C78338C16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork_1", "HomeWork_1", "{82311080-1208-4FEC-9344-E804F15488C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork_1_By_Egor", "src\home-works\SidorenkoEgor\HomeWork_1\HomeWork_1_By_Egor\HomeWork_1_By_Egor.csproj", "{C37D2ED6-465B-4057-8961-9EB933791C45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -230,6 +236,10 @@ Global
 		{750F8ED8-1219-4E57-AB2A-510AF4F904EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{750F8ED8-1219-4E57-AB2A-510AF4F904EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{750F8ED8-1219-4E57-AB2A-510AF4F904EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C37D2ED6-465B-4057-8961-9EB933791C45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C37D2ED6-465B-4057-8961-9EB933791C45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C37D2ED6-465B-4057-8961-9EB933791C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C37D2ED6-465B-4057-8961-9EB933791C45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -291,6 +301,9 @@ Global
 		{989376E0-BC8A-4858-A6AF-D22BBEEAD386} = {F53330EF-C945-4BAD-A03A-5F89A68EA9B2}
 		{39156793-1F1D-4F52-8E65-2B41E2E5F6EB} = {DBCFDE11-4144-4D23-A49A-98B539124246}
 		{750F8ED8-1219-4E57-AB2A-510AF4F904EB} = {39156793-1F1D-4F52-8E65-2B41E2E5F6EB}
+		{2B08F53C-3C1E-4E98-B0E5-B31C78338C16} = {7009F5E6-1C4F-40A9-AB79-7A66804CAB67}
+		{82311080-1208-4FEC-9344-E804F15488C9} = {2B08F53C-3C1E-4E98-B0E5-B31C78338C16}
+		{C37D2ED6-465B-4057-8961-9EB933791C45} = {82311080-1208-4FEC-9344-E804F15488C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E51D3AF-5F55-46C0-988B-B0700A22A6B7}
