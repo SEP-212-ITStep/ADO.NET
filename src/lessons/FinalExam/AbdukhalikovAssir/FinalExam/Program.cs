@@ -10,6 +10,7 @@ namespace FinalExam
         static void Main(string[] args)
         {
             ChatDbContext connect = new ChatDbContext();
+
         }
     }
 }
