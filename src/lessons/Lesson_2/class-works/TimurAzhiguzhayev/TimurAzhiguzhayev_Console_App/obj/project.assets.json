@@ -479,7 +479,7 @@
       "projectName": "TimurAzhiguzhayev_Console_App",
       "projectPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\lessons\\Lesson_2\\class-works\\TimurAzhiguzhayev\\TimurAzhiguzhayev_Console_App\\TimurAzhiguzhayev_Console_App.csproj",
       "packagesPath": "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\lessons\\Lesson_2\\class-works\\TimurAzhiguzhayev\\TimurAzhiguzhayev_Console_App\\obj\\",
+      "outputPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\lessons\\Lesson_2\\class-works\\TimurAzhiguzhayev\\TimurAzhiguzhayev_Console_App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\timur.azhiguzhayev\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -529,7 +529,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
