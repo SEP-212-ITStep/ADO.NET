@@ -1,0 +1,12 @@
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1Game\bin\Debug\net7.0\ClassLibrary1Game.deps.json
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1Game\bin\Debug\net7.0\ClassLibrary1Game.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1Game\bin\Debug\net7.0\ClassLibrary1Game.pdb
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1Game\obj\Debug\net7.0\ClassLibrary1Game.csproj.AssemblyReference.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1Game\obj\Debug\net7.0\ClassLibrary1Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1Game\obj\Debug\net7.0\ClassLibrary1Game.AssemblyInfoInputs.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1Game\obj\Debug\net7.0\ClassLibrary1Game.AssemblyInfo.cs
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1Game\obj\Debug\net7.0\ClassLibrary1Game.csproj.CoreCompileInputs.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1Game\obj\Debug\net7.0\ClassLibrary1Game.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1Game\obj\Debug\net7.0\refint\ClassLibrary1Game.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1Game\obj\Debug\net7.0\ClassLibrary1Game.pdb
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1Game\obj\Debug\net7.0\ref\ClassLibrary1Game.dll

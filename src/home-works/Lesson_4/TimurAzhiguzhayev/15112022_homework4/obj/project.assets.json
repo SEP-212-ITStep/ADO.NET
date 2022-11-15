@@ -1133,6 +1133,31 @@
           }
         }
       },
+      "ClassLibrary1Game/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ClassLibrary1Game.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary1Game.dll": {}
+        }
+      },
+      "ClassLibrary1GameDbContext/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ClassLibrary1Game": "1.0.0",
+          "Game": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ClassLibrary1GameDbContext.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary1GameDbContext.dll": {}
+        }
+      },
       "Game/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1144,21 +1169,6 @@
         },
         "runtime": {
           "bin/placeholder/Game.dll": {}
-        }
-      },
-      "GameDbContext/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "Game": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
-        },
-        "compile": {
-          "bin/placeholder/GameDbContext.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GameDbContext.dll": {}
         }
       }
     }
@@ -3481,20 +3491,26 @@
         "version.txt"
       ]
     },
+    "ClassLibrary1Game/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibrary1Game/ClassLibrary1Game.csproj",
+      "msbuildProject": "../ClassLibrary1Game/ClassLibrary1Game.csproj"
+    },
+    "ClassLibrary1GameDbContext/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibrary1GameDbContext/ClassLibrary1GameDbContext.csproj",
+      "msbuildProject": "../ClassLibrary1GameDbContext/ClassLibrary1GameDbContext.csproj"
+    },
     "Game/1.0.0": {
       "type": "project",
-      "path": "../Game/Game.csproj",
-      "msbuildProject": "../Game/Game.csproj"
-    },
-    "GameDbContext/1.0.0": {
-      "type": "project",
-      "path": "../GameDbContext/GameDbContext.csproj",
-      "msbuildProject": "../GameDbContext/GameDbContext.csproj"
+      "path": "../../../Lesson_3/Game/Game.csproj",
+      "msbuildProject": "../../../Lesson_3/Game/Game.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "GameDbContext >= 1.0.0",
+      "ClassLibrary1Game >= 1.0.0",
+      "ClassLibrary1GameDbContext >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.0"
     ]
@@ -3526,8 +3542,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\GameDbContext\\GameDbContext.csproj": {
-              "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\GameDbContext\\GameDbContext.csproj"
+            "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\ClassLibrary1GameDbContext.csproj": {
+              "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\ClassLibrary1GameDbContext.csproj"
+            },
+            "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\ClassLibrary1Game.csproj": {
+              "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\ClassLibrary1Game.csproj"
             }
           }
         }

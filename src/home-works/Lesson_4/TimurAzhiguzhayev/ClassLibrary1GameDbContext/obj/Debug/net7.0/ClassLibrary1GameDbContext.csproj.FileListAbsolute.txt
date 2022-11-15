@@ -1,0 +1,17 @@
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\obj\Debug\net7.0\ClassLibrary1GameDbContext.csproj.AssemblyReference.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\obj\Debug\net7.0\ClassLibrary1GameDbContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\obj\Debug\net7.0\ClassLibrary1GameDbContext.AssemblyInfoInputs.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\obj\Debug\net7.0\ClassLibrary1GameDbContext.AssemblyInfo.cs
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\obj\Debug\net7.0\ClassLibrary1GameDbContext.csproj.CoreCompileInputs.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\bin\Debug\net7.0\ClassLibrary1GameDbContext.deps.json
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\bin\Debug\net7.0\ClassLibrary1GameDbContext.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\bin\Debug\net7.0\ClassLibrary1GameDbContext.pdb
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\bin\Debug\net7.0\ClassLibrary1Game.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\bin\Debug\net7.0\Game.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\bin\Debug\net7.0\Game.pdb
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\bin\Debug\net7.0\ClassLibrary1Game.pdb
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\obj\Debug\net7.0\ClassLibrary1GameDbContext.csproj.CopyComplete
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\obj\Debug\net7.0\ClassLibrary1GameDbContext.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\obj\Debug\net7.0\refint\ClassLibrary1GameDbContext.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\obj\Debug\net7.0\ClassLibrary1GameDbContext.pdb
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_4\TimurAzhiguzhayev\ClassLibrary1GameDbContext\obj\Debug\net7.0\ref\ClassLibrary1GameDbContext.dll
