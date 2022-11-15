@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uubJbCwwcqGJom+sEo3J4devqo+LMnTp7cQSyQljwBeyFCuGH0MjXuk0AXMIbuB8AgmxUV76VY8z6ydLAc4/0w==",
+  "dgSpecHash": "1kSfJXmtz4ywt4459g66CAoybjIiMc9DosOspb74B0B828urOVF0JCQsxrKaWPE4WvTGgWC3Z9eS+43K/P6B/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\lessons\\Lesson_2\\class-works\\TimurAzhiguzhayev\\TimurAzhiguzhayev_Console_App\\TimurAzhiguzhayev_Console_App.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,7 @@
     "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\system.data.sqlclient\\4.8.4\\system.data.sqlclient.4.8.4.nupkg.sha512",
+    "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
     "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],

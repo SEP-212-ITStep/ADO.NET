@@ -1,0 +1,17 @@
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\bin\Debug\net7.0\ClassLibrary2.deps.json
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\bin\Debug\net7.0\ClassLibrary2.runtimeconfig.json
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\bin\Debug\net7.0\ClassLibrary2.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\bin\Debug\net7.0\ClassLibrary2.pdb
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\bin\Debug\net7.0\Game.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\bin\Debug\net7.0\Game.pdb
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.csproj.AssemblyReference.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.AssemblyInfoInputs.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.AssemblyInfo.cs
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.csproj.CoreCompileInputs.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.csproj.CopyComplete
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\obj\Debug\net7.0\refint\ClassLibrary2.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.pdb
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.genruntimeconfig.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\ClassLibrary2\obj\Debug\net7.0\ref\ClassLibrary2.dll

@@ -1,0 +1,14 @@
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\bin\Debug\net7.0\Game.deps.json
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\bin\Debug\net7.0\Game.runtimeconfig.json
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\bin\Debug\net7.0\Game.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\bin\Debug\net7.0\Game.pdb
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\obj\Debug\net7.0\Game.csproj.AssemblyReference.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\obj\Debug\net7.0\Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\obj\Debug\net7.0\Game.AssemblyInfoInputs.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\obj\Debug\net7.0\Game.AssemblyInfo.cs
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\obj\Debug\net7.0\Game.csproj.CoreCompileInputs.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\obj\Debug\net7.0\Game.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\obj\Debug\net7.0\refint\Game.dll
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\obj\Debug\net7.0\Game.pdb
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\obj\Debug\net7.0\Game.genruntimeconfig.cache
+C:\Users\timur.azhiguzhayev\source\repos\ADO.NET\src\home-works\Lesson_3\Game\obj\Debug\net7.0\ref\Game.dll

@@ -1,0 +1,15 @@
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\bin\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.exe
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\bin\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.deps.json
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\bin\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.runtimeconfig.json
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\bin\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.dll
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\bin\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.pdb
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\obj\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.csproj.AssemblyReference.cache
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\obj\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\obj\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.AssemblyInfoInputs.cache
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\obj\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.AssemblyInfo.cs
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\obj\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.csproj.CoreCompileInputs.cache
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\obj\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.dll
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\obj\Debug\net6.0\refint\SidorenkoEgor_Lesson_2_Home_Work.dll
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\obj\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.pdb
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\obj\Debug\net6.0\SidorenkoEgor_Lesson_2_Home_Work.genruntimeconfig.cache
+C:\Users\timur.azhiguzhayev\Source\Repos\ADO.NET\src\home-works\Lesson_2\SidorenkoEgor\SidorenkoEgor_Lesson_2_Home_Work\obj\Debug\net6.0\ref\SidorenkoEgor_Lesson_2_Home_Work.dll
