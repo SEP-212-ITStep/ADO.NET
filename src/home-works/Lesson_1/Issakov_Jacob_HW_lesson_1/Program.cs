@@ -48,7 +48,7 @@ namespace Issakov_Jacob_HW_lesson_1
 
 
             // Отображение всех цветов;
-            ShowAllColors(connectionString);
+            //ShowAllColors(connectionString);
 
 
 
@@ -73,21 +73,41 @@ namespace Issakov_Jacob_HW_lesson_1
 
             //■ Показать количество фруктов;
             // "SELECT COUNT(*) FROM dbo.VAF WHERE type='fruit'";
+            //FruitsCount(connectionString);
+
+
+
             //■ Показать количество овощей и фруктов заданного
             //цвета;
             // $"SELECT COUNT(*) FROM dbo.VAF WHERE color='input'";
+            //SelectColor(connectionString);
+
+
+
             //■ Показать количество овощей фруктов каждого цвета;
+            //EveryColor(connectionString);
+
 
             //■ Показать овощи и фрукты с калорийностью ниже
             //указанной;
+            //CaloriesBelowInput(connectionString);
+
+
+
             // $"SELECT * FROM dbo.VAF WHERE calories<'input'";
             //■ Показать овощи и фрукты с калорийностью выше
             //указанной;
-            // $"SELECT * FROM dbo.VAF WHERE calories>'input'";
+            //CaloriesAboveInput(connectionString);
+
             //■ Показать овощи и фрукты с калорийностью в указанном диапазоне;
             // $"SELECT * FROM dbo.VAF WHERE calories BETWEEN 'input1' AND 'input2'";
+            //CaloriesDiapazon(connectionString);
+
+
+
             //■ Показать все овощи и фрукты, у которых цвет желтый
             // "SELECT [name] FROM dbo.VAF WHERE color='yellow'";
+            //YellowColor(connectionString);
 
 
 
@@ -125,6 +145,7 @@ namespace Issakov_Jacob_HW_lesson_1
             try
             {
                 Console.ForegroundColor = ConsoleColor.Red;
+                SortedSet<string> names = new SortedSet<string>();
                 const string sqlQuery = "SELECT [name] FROM dbo.VAF";
                 using var sqlConnection = new SqlConnection(connectionString);
                 sqlConnection.Open();
@@ -133,7 +154,11 @@ namespace Issakov_Jacob_HW_lesson_1
                 while (reader.Read())
                 {
                     var name = reader["name"].ToString();
-                    Console.WriteLine($"Name - {name}");
+                    names.Add(name);
+                }
+                foreach (var item in names)
+                {
+                    Console.WriteLine($"Name - {item}");
                 }
             }
             catch (Exception)
@@ -142,12 +167,12 @@ namespace Issakov_Jacob_HW_lesson_1
                 Console.WriteLine("Подключение к базе прошло не успешно");
             }
         }
-        public static void ShowAllColors(string connectionString)
+        public static SortedSet<string> ShowAllColors(string connectionString)
         {
+            SortedSet<string> colors = new SortedSet<string>();
             try
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                SortedSet<string> colors = new SortedSet<string>();
                 const string sqlQuery = "SELECT [color] FROM dbo.VAF";
                 using var sqlConnection = new SqlConnection(connectionString);
                 sqlConnection.Open();
@@ -162,34 +187,14 @@ namespace Issakov_Jacob_HW_lesson_1
                 {
                     Console.WriteLine($"Color - {item}");
                 }
+                return colors;
             }
             catch (Exception)
             {
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.WriteLine("Подключение к базе прошло не успешно");
             }
-        }
-        public static void RedOrYellow(string connectionString)
-        {
-            try
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                const string sqlQuery = "SELECT [name] FROM dbo.VAF WHERE color='yellow' OR color='red'";
-                using var sqlConnection = new SqlConnection(connectionString);
-                sqlConnection.Open();
-                using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
-                using var reader = sqlCommand.ExecuteReader();
-                while (reader.Read())
-                {
-                    var name = reader["name"].ToString();
-                    Console.WriteLine($"Name: {name}");
-                }
-            }
-            catch (Exception)
-            {
-                Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                Console.WriteLine("Подключение к базе прошло не успешно");
-            }
+            return colors;
         }
         public static void MaxCalor(string connectionString)
         {
@@ -226,19 +231,11 @@ namespace Issakov_Jacob_HW_lesson_1
             try
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                string sqlQuery = "SELECT * FROM dbo.VAF";
+                string sqlQuery = "SELECT MIN(calories) FROM dbo.VAF";
                 using var sqlConnection = new SqlConnection(connectionString);
                 sqlConnection.Open();
                 using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
-                using var reader = sqlCommand.ExecuteReader();
-                int min = int.MaxValue;
-                while (reader.Read())
-                {
-                    var calories = Convert.ToInt32(reader["calories"].ToString());
-
-                    if (calories < min)
-                        min = calories;
-                }
+                object min = sqlCommand.ExecuteScalar();
                 sqlConnection.Close();
                 sqlConnection.Open();
                 sqlQuery = $"SELECT * FROM dbo.VAF WHERE calories='{min}'";
@@ -264,23 +261,14 @@ namespace Issakov_Jacob_HW_lesson_1
             try
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                string sqlQuery = "SELECT * FROM dbo.VAF";
+                string sqlQuery = "SELECT AVG(calories) FROM dbo.VAF";
                 using var sqlConnection = new SqlConnection(connectionString);
                 sqlConnection.Open();
                 using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
-                using var reader = sqlCommand.ExecuteReader();;
-                int sum = 0;
-                int amount = 0;
-                while (reader.Read())
-                {
-                    var name = reader["name"].ToString();
-                    var type = reader["type"].ToString();
-                    var color = reader["color"].ToString();
-                    var calories = Convert.ToInt32(reader["calories"].ToString());
-                    sum += calories;
-                    amount++;
-                }
-                Console.WriteLine($"Mean calories: {sum / amount}");
+                object avg = sqlCommand.ExecuteScalar();
+                sqlConnection.Close();
+                Console.WriteLine(avg.ToString());
+
             }
             catch (Exception)
             {
@@ -297,6 +285,187 @@ namespace Issakov_Jacob_HW_lesson_1
             using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection);;
             object count = sqlCommand.ExecuteScalar();
             Console.WriteLine(count.ToString());
+        }
+        public static void FruitsCount(string connectionString)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            string sqlQuery = "SELECT COUNT(*) FROM dbo.VAF WHERE type='fruit'";
+            using var sqlConnection = new SqlConnection(connectionString);
+            sqlConnection.Open();
+            using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection); ;
+            object count = sqlCommand.ExecuteScalar();
+            Console.WriteLine(count.ToString());
+        }
+        public static void SelectColor(string connectionString)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            ShowAllColors(connectionString);
+            string input = Console.ReadLine();
+            string sqlQuery = $"SELECT COUNT(*) FROM dbo.VAF WHERE color='{input}'";
+            using var sqlConnection = new SqlConnection(connectionString);
+            sqlConnection.Open();
+            using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection); ;
+            object count = sqlCommand.ExecuteScalar();
+            Console.WriteLine(count.ToString());
+        }
+        public static void RedOrYellow(string connectionString)
+        {
+            try
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                const string sqlQuery = "SELECT [name] FROM dbo.VAF WHERE color='yellow' OR color='red'";
+                using var sqlConnection = new SqlConnection(connectionString);
+                sqlConnection.Open();
+                using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+                using var reader = sqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    var name = reader["name"].ToString();
+                    Console.WriteLine($"Name: {name}");
+                }
+            }
+            catch (Exception)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine("Подключение к базе прошло не успешно");
+            }
+        }
+        public static void EveryColor(string connectionString)
+        {
+            try
+            {
+                SortedSet<string> colors = ShowAllColors(connectionString);
+                foreach (var item in colors)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    string sqlQuery = $"SELECT * FROM dbo.VAF WHERE color='{item}'";
+                    using var sqlConnection = new SqlConnection(connectionString);
+                    sqlConnection.Open();
+                    using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+                    using var reader = sqlCommand.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        var name = reader["name"].ToString();
+                        var type = reader["type"].ToString();
+                        var color = reader["color"].ToString();
+                        var calories = reader["calories"].ToString();
+                        Console.WriteLine($"Name - {name}, Type - {type}, Color - {color}, Calories - {calories}");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine("Подключение к базе прошло не успешно");
+            }
+        }
+        public static void CaloriesBelowInput(string connectionString)
+        {
+            try
+            {
+                Console.WriteLine("Введите максимум калорий: ");
+                string maxCalories = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.Red;
+                string sqlQuery = $"SELECT * FROM dbo.VAF WHERE calories<{maxCalories}";
+                using var sqlConnection = new SqlConnection(connectionString);
+                sqlConnection.Open();
+                using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+                using var reader = sqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    var name = reader["name"].ToString();
+                    var type = reader["type"].ToString();
+                    var color = reader["color"].ToString();
+                    var calories = reader["calories"].ToString();
+                    Console.WriteLine($"Name - {name}, Type - {type}, Color - {color}, Calories - {calories}");
+                }
+            }
+            catch (Exception)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine("Подключение к базе прошло не успешно");
+            }
+        }
+        public static void CaloriesAboveInput(string connectionString)
+        {
+            try
+            {
+                Console.WriteLine("Введите минимум калорий: ");
+                string minCalories = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.Red;
+                string sqlQuery = $"SELECT * FROM dbo.VAF WHERE calories>{minCalories}";
+                using var sqlConnection = new SqlConnection(connectionString);
+                sqlConnection.Open();
+                using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+                using var reader = sqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    var name = reader["name"].ToString();
+                    var type = reader["type"].ToString();
+                    var color = reader["color"].ToString();
+                    var calories = reader["calories"].ToString();
+                    Console.WriteLine($"Name - {name}, Type - {type}, Color - {color}, Calories - {calories}");
+                }
+            }
+            catch (Exception)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine("Подключение к базе прошло не успешно");
+            }
+        }
+        public static void CaloriesDiapazon(string connectionString)
+        {
+            try
+            {
+                Console.WriteLine("Введите минимум калорий: ");
+                string minCalories = Console.ReadLine();
+                Console.WriteLine("Введите максимум калорий: ");
+                string maxCalories = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.Red;
+                string sqlQuery = $"SELECT * FROM dbo.VAF WHERE calories BETWEEN {minCalories} AND {maxCalories}";
+                using var sqlConnection = new SqlConnection(connectionString);
+                sqlConnection.Open();
+                using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+                using var reader = sqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    var name = reader["name"].ToString();
+                    var type = reader["type"].ToString();
+                    var color = reader["color"].ToString();
+                    var calories = reader["calories"].ToString();
+                    Console.WriteLine($"Name - {name}, Type - {type}, Color - {color}, Calories - {calories}");
+                }
+            }
+            catch (Exception)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine("Подключение к базе прошло не успешно");
+            }
+        }
+        public static void YellowColor(string connectionString)
+        {
+            try
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                const string sqlQuery = "SELECT * FROM dbo.VAF WHERE color='yellow'";
+                using var sqlConnection = new SqlConnection(connectionString);
+                sqlConnection.Open();
+                using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+                using var reader = sqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    var name = reader["name"].ToString();
+                    var type = reader["type"].ToString();
+                    var color = reader["color"].ToString();
+                    var calories = reader["calories"].ToString();
+                    Console.WriteLine($"Name - {name}, Type - {type}, Color - {color}, Calories - {calories}");
+                }
+            }
+            catch (Exception)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.WriteLine("Подключение к базе прошло не успешно");
+            }
         }
     }
 }

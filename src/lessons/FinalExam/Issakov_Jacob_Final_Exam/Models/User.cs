@@ -11,5 +11,13 @@ public partial class User
 
     public string? Password { get; set; }
 
+    public virtual ICollection<GroupMessage> GroupMessages { get; } = new List<GroupMessage>();
+
+    public virtual ICollection<Group> Groups { get; } = new List<Group>();
+
+    public virtual ICollection<PrivateMessage> PrivateMessageFromUsers { get; } = new List<PrivateMessage>();
+
+    public virtual ICollection<PrivateMessage> PrivateMessageToUsers { get; } = new List<PrivateMessage>();
+
     public virtual ICollection<UserGroup> UserGroups { get; } = new List<UserGroup>();
 }

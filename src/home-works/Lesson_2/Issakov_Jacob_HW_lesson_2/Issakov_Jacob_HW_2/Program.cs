@@ -38,6 +38,17 @@ namespace Issakov_Jacob_HW_lesson_2
 
 
 
+            //Задание 1
+
+            //Вставка новых товаров;
+            Add(connectionString);
+
+            //■ Вставка новых типов товаров;
+
+            //Вставка новых поставщиков.
+
+
+
             // Отображение всей информации о товаре;
             // "SELECT * FROM dbo.Storage"
 
@@ -58,6 +69,42 @@ namespace Issakov_Jacob_HW_lesson_2
 
             // Показать товар с максимальной себестоимостью.
             // "SELCT MAX(cost_price) FORM dbo.Storage"
+        }
+
+
+        static void Add(string connectionString)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            using var sqlConnection = new SqlConnection(connectionString);
+            sqlConnection.Open();
+            Console.WriteLine("Name Product: ");
+            var name = Console.ReadLine();
+            Console.WriteLine("Type name: ");
+            var type = Console.ReadLine();
+            Console.WriteLine("Supplier name: ");
+            var supplier = Console.ReadLine();
+            Console.WriteLine("Amount: ");
+            int amount = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Cost price: ");
+            double costPrice = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(costPrice * 1.0);
+            Console.WriteLine("Delivery date: ");
+            DateTime deliveryDate = DateTime.Now;
+            string sqlFormattedDate = deliveryDate.ToString("yyyy-MM-dd HH:mm:ss.fff"); // 2022-07-19 00:00:00.000
+            Console.WriteLine(sqlFormattedDate);
+
+            string sqlQuery = $"INSERT INTO dbo.Product (Name, Type, Supplier, Amount, Cost_Price, Delivery_Date)VALUES({name}," +
+                              $" {type}, {supplier}, {amount}, {costPrice}, {sqlFormattedDate})";
+            SqlCommand sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+            sqlCommand.ExecuteNonQuery();
+            //try
+            //{
+            //}
+            //catch (Exception)
+            //{
+            //    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            //    Console.WriteLine("Подключение к базе прошло не успешно");
+            //}
         }
     }
 }

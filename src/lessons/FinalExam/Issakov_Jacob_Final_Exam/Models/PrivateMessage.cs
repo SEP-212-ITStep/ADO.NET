@@ -18,4 +18,10 @@ public partial class PrivateMessage
     public bool IsUserInBlackList { get; set; }
 
     public string? AdditionalInfo { get; set; }
+
+    public bool IsDeleted { get; set; }
+
+    public virtual User FromUser { get; set; } = null!;
+
+    public virtual User ToUser { get; set; } = null!;
 }
