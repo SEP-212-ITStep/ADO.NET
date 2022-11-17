@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tzM0bcBbeD4bD9WCjX6Trd1TPL8lk/fqhjAx5VkewHdNjT/skyBDgNkXA5r5R7VTY2MH2EEB6bZstYae/kdozA==",
+  "dgSpecHash": "7TTkZjLG+7p9A7iY/Au3A5BvlGrHnJL4Zjc4V7h1pCiFSJYaNQgW4zzNkNjwXiuOZcrK1+DVyM/DtfBzQDs7dg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\ClassLibrary2\\ClassLibrary2.csproj",
+  "projectFilePath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\ClassLibrary2\\ClassLibrary2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -3506,11 +3506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\15112022_homework3\\15112022_homework3.csproj",
+      "projectUniqueName": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\15112022_homework3\\15112022_homework3.csproj",
       "projectName": "15112022_homework3",
-      "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\15112022_homework3\\15112022_homework3.csproj",
+      "projectPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\15112022_homework3\\15112022_homework3.csproj",
       "packagesPath": "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\15112022_homework3\\obj\\",
+      "outputPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\15112022_homework3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\timur.azhiguzhayev\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3527,11 +3527,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\ClassLibrary2\\ClassLibrary2.csproj": {
-              "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\ClassLibrary2\\ClassLibrary2.csproj"
+            "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\ClassLibrary2\\ClassLibrary2.csproj": {
+              "projectPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\ClassLibrary2\\ClassLibrary2.csproj"
             },
-            "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj": {
-              "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj"
+            "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj": {
+              "projectPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj"
             }
           }
         }

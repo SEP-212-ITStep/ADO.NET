@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\ClassLibrary1GameDbContext.csproj": {}
+    "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\ClassLibrary1GameDbContext.csproj": {}
   },
   "projects": {
-    "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj": {
+    "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj",
+        "projectUniqueName": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj",
         "projectName": "Game",
-        "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj",
+        "projectPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj",
         "packagesPath": "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\obj\\",
+        "outputPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\timur.azhiguzhayev\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,14 +71,14 @@
         }
       }
     },
-    "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\ClassLibrary1GameDbContext.csproj": {
+    "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\ClassLibrary1GameDbContext.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\ClassLibrary1GameDbContext.csproj",
+        "projectUniqueName": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\ClassLibrary1GameDbContext.csproj",
         "projectName": "ClassLibrary1GameDbContext",
-        "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\ClassLibrary1GameDbContext.csproj",
+        "projectPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\ClassLibrary1GameDbContext.csproj",
         "packagesPath": "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\obj\\",
+        "outputPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\timur.azhiguzhayev\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -95,11 +95,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj": {
-                "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj"
+              "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj": {
+                "projectPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_3\\Game\\Game.csproj"
               },
-              "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\ClassLibrary1Game.csproj": {
-                "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\ClassLibrary1Game.csproj"
+              "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\ClassLibrary1Game.csproj": {
+                "projectPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\ClassLibrary1Game.csproj"
               }
             }
           }
@@ -139,14 +139,14 @@
         }
       }
     },
-    "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\ClassLibrary1Game.csproj": {
+    "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\ClassLibrary1Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\ClassLibrary1Game.csproj",
+        "projectUniqueName": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\ClassLibrary1Game.csproj",
         "projectName": "ClassLibrary1Game",
-        "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\ClassLibrary1Game.csproj",
+        "projectPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\ClassLibrary1Game.csproj",
         "packagesPath": "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\obj\\",
+        "outputPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1Game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\timur.azhiguzhayev\\AppData\\Roaming\\NuGet\\NuGet.Config",

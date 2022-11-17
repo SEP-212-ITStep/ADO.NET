@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "z99svimkW5pujUsdt+kXrjAI8SXy4zEX6dHZL7ekdVmFbbXSJrDsdbhoXtvYHLBcIR6uSjMpO4/AYDZxq3c4HQ==",
+  "dgSpecHash": "GVuzz2p1pFvn9goNfoe0lrBWZm4sbUNt/aPbhThhmTtC1f1W/PRruLG/LM5wxhdIvQda6PV1zRjlvp688xdl7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\ClassLibrary1GameDbContext.csproj",
+  "projectFilePath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\home-works\\Lesson_4\\TimurAzhiguzhayev\\ClassLibrary1GameDbContext\\ClassLibrary1GameDbContext.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
