@@ -14,7 +14,8 @@ namespace Dapper_Console_App
                                             "Encrypt=false";
             using var sqlConnection = new SqlConnection(connectionString);
             sqlConnection.Open();
-            const string selectSqlQuery = "SELECT gm.Message, gm.create_date as CreateDate, gm.user_id as UserId, u.login as [AuthorName] " +
+            const string selectSqlQuery = "SELECT gm.Message, gm.create_date as CreateDate, gm.user_id as UserId," +
+                                          " u.login as [AuthorName] " +
                                           "FROM [ChatDb].[dbo].[GroupMessages] gm" +
                                           "  INNER JOIN Users u on gm.user_id = u.id";
 
