@@ -12,7 +12,7 @@ namespace Lesson_7
             sqlConnection.Open();
 
             const string SelectSqlQuery = "SELECT * FROM [GroupMessages]";
-            GroupMessage groupMessages = sqlConnection.Query<GroupMessage>(SelectSqlQuery).ToList();
+            GroupMessage groupMessages = sqlConnection.Query<GroupMessages>(SelectSqlQuery).ToList();
             foreach (var item in groupMessages)
             {
                 Console.WriteLine($"{groupMessages.UserId} : {groupMessages.Message}" +
