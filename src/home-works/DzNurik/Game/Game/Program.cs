@@ -46,7 +46,7 @@ namespace Game
                 var games = db.Games.ToList();
                 foreach (var game in games)
                 {
-                    Console.WriteLine($"ID - {game.Id}\nGame name - {game.GameName}\nDevelopers - {game.GameDeveloper}\nPublishYear - {game.PublishYear}\nStyle: {game.GameStyle}\nSells {game.Sells}");
+                    Console.WriteLine($"ID - {game.Id}\nGame name - {game.GameName}\nDevelopers - {game.GameDeveloper}\nPublishYear - {game.PublishYear}\nStyle: {game.GameStyle}\nGameVode - {game.GameMode}\nSells {game.Sells}");
                     Console.WriteLine("_____________________________________________________________");
                 }
                 Console.ReadLine();
