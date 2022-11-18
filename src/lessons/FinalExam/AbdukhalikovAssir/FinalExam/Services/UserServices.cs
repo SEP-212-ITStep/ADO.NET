@@ -16,7 +16,8 @@ namespace FinalExam.Services
         {
             try
             {
-                List<string> tmp = new List<string>();
+                List<string> tmp = msg.GetActiveUsers();
+                if () { }
 
                 User newUser = new User();
                 newUser.Login = Login;
