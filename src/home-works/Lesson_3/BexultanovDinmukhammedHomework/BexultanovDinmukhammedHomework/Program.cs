@@ -401,7 +401,7 @@ namespace BexultanovDinmukhammedHomework
 
                 int min = int.MaxValue;
                 string key = "";
-                foreach (var item in supplierQuantity)
+                foreach (var item in typeQuantity)
                 {
                     if (min > item.Value)
                     {
