@@ -2,6 +2,9 @@
 using Exam.UserService.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
+
 namespace Exam.UserService
 {
     internal class Program
@@ -14,10 +17,12 @@ namespace Exam.UserService
             using var dbContext = new ChatDbContext();
             try
             {
-                int ch = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Выберите пункты меню:");
                 Console.WriteLine("1. Регистрация");
                 Console.WriteLine("2. Войти");
+                Console.WriteLine("3.Показать список пользователей");
+                int ch = Convert.ToInt32(Console.ReadLine());
+                
                 switch (ch)
                 {
                     case 1:
@@ -25,6 +30,9 @@ namespace Exam.UserService
                         break;
 
                     case 2:
+                        break;
+                    case 3:
+
                         break;
                 }
 
@@ -37,14 +45,32 @@ namespace Exam.UserService
         }
         public static void Registration(ChatDbContext db)
         {
+
+
             User newUser = new User();
-            Console.Write("Enter login: ");
-            newUser.Login = Console.ReadLine();
-            Console.Write("Enter password: ");
-            newUser.Password = Console.ReadLine();
-            db.Users.Add(newUser);
-            db.SaveChanges();
-            Console.WriteLine("Added!");
+            try
+            {
+                if (newUser.Login!=null)
+                {
+                    Console.WriteLine("Пользователь:" + newUser.Login + "уже зарегестрирован!");
+                }
+           
+                else
+                {
+                    Console.Write("Enter login: ");
+                    newUser.Login = Console.ReadLine();
+                    Console.Write("Enter password: ");
+                    newUser.Password = HashPass(Console.ReadLine());
+                    db.Users.Add(newUser);
+                    db.SaveChanges();
+                    Console.WriteLine("Added!");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine("Пользователь: " + newUser.Login + " уже зарегестрирован!", ex);
+            }
         }
 
         public static void EnterTo()
@@ -54,6 +80,16 @@ namespace Exam.UserService
             string connectionP = "SELECT [password] FROM [ChatDb].[dbo].[Users]";
 
         }
+        static string HashPass(string pass)
+        {
+            var md5 = MD5.Create();
+            var hash = md5.ComputeHash(Encoding.UTF8.GetBytes(pass));
+            return Convert.ToBase64String(hash);
+        }
+        //static string GetAllUsers()
+        //{
+
+        //}
     }
 
 }
