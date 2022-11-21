@@ -1,6 +1,7 @@
 ﻿using FinalExam.Data;
 using FinalExam.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Data;
 using System.Reflection;
 using System.Security.Cryptography;
@@ -10,20 +11,11 @@ namespace FinalExam.Services
 {
     internal class UserServices
     {
-        
-        SqlConnection UserServiceConnection = new SqlConnection("Server=127.0.0.1;Database=ChatDb;Trusted_Connection=True;Encrypt=false");
-        ChatDbContext asirush_srv = new();
-        Messages msg = new();
-
         public User Registration(string Login, string Password)
         {
             try
             {
-                User newUser = new User();
-                newUser.Login = Login;
-                newUser.Password = Password;
                 List<string> tmp = GetActiveUsers();
-
                 if (tmp.Contains(Login))
                 {
                     Console.WriteLine("Error: registration error User exists");
@@ -31,19 +23,26 @@ namespace FinalExam.Services
                 }
                 else
                 {
-                    // prepare command string
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.CommandText = "insert into Users (login, password) values (@Login, @Password)";
-                    cmd.Parameters.Add(new SqlParameter("Login", Login));
-                    cmd.Parameters.Add(new SqlParameter("Password", HashPass(Password)));
-                    cmd.ExecuteNonQuery();
-                    return newUser;
+                    using (SqlConnection connection = new SqlConnection(ConnectionStringProvider.ConnectionString))
+                    {
+                        connection.Open();
+                        User newUser = new User();
+                        newUser.Login = Login;
+                        newUser.Password = Password;
+                        SqlCommand cmd = connection.CreateCommand();
+                        cmd.CommandText = "insert into Users (login, password) values (@Login, @Password)";
+                        cmd.Parameters.AddWithValue("@Login", Login);
+                        cmd.Parameters.AddWithValue("@Password", HashPass(Password));
+                      //  cmd.Parameters.Add("Password", SqlDbType.VarChar, 50).Value = HashPass(Password);
+                        cmd.ExecuteNonQuery();
+                        return newUser;
+                    }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: registration error ", ex.Message);
+                Console.WriteLine("Error: registration error {0}", ex.Message);
+                Console.WriteLine(ex);
                 return null;
             }
         }
@@ -52,29 +51,33 @@ namespace FinalExam.Services
             try
             {
                 const string SqlQuery = "SELECT [id], [login], [password] FROM dbo.Users WHERE login = @Login";
-                SqlCommand cmd = new SqlCommand(SqlQuery, UserServiceConnection);
-                SqlConnection.Open();
-                cmd.Parameters.Add("Login", SqlDbType.VarChar, 500).Value = login;
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+
+                using (SqlConnection connection = new SqlConnection(ConnectionStringProvider.ConnectionString))
                 {
-                    var pass = reader.GetString(2);
-                    if (HashPass(password) == reader["password"].ToString())
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand(SqlQuery, connection);
+                    cmd.Parameters.Add("Login", SqlDbType.VarChar, 500).Value = login;
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
                     {
-                        Console.WriteLine("Welcome!");
-                        User AuthorizedUser= new User();
-                        AuthorizedUser.Login = reader.GetString(1);
-                        AuthorizedUser.Password = reader.GetString(2);
-                        AuthorizedUser.Id= reader.GetInt32(0);
-                        return AuthorizedUser;
+                        var pass = reader.GetString(2);
+                        if (HashPass(password) == reader["password"].ToString())
+                        {
+                            Console.WriteLine("Welcome!");
+                            User AuthorizedUser = new User();
+                            AuthorizedUser.Login = reader.GetString(1);
+                            AuthorizedUser.Password = reader.GetString(2);
+                            AuthorizedUser.Id = reader.GetInt32(0);
+                            return AuthorizedUser;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Password is wrong!");
+                            return null;
+                        }
                     }
-                    else
-                    {
-                        Console.WriteLine("Password is wrong!");
-                        return null;
-                    }
+                    return null;
                 }
-                return null;
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); return null; }
         }
@@ -98,7 +101,7 @@ namespace FinalExam.Services
             {
                 List<User> Users = new List<User>();
                 const string SqlQuery = "SELECT * FROM dbo.Users";
-                using var SqlConnection = new SqlConnection(UserServiceConnection.ToString());
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
                 SqlConnection.Open();
                 SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -121,14 +124,14 @@ namespace FinalExam.Services
             {
                 List<string> Users = new List<string>();
                 const string SqlQuery = "SELECT [login] FROM dbo.Users";
-                using (SqlConnection connection = new SqlConnection(UserServiceConnection.ToString()))
+                using (SqlConnection connection = new SqlConnection(ConnectionStringProvider.ConnectionString))
                 {
                     connection.Open();
                     SqlCommand cmd = new SqlCommand(SqlQuery, connection);
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        string user = new string();
+                        string user = new string("");
                         user = reader.GetString(0);
                         Users.Add(user);
                     }

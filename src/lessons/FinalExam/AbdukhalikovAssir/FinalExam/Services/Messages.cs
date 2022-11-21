@@ -11,7 +11,6 @@ namespace FinalExam.Services
 {
     internal class Messages
     {
-        ConnectionString conn = new();
 
         public List<User> GetActiveUsersList()
         {
@@ -19,7 +18,7 @@ namespace FinalExam.Services
             {
                 List<User> Users = new List<User>();
                 const string SqlQuery = "SELECT * FROM dbo.Users";
-                using var SqlConnection = new SqlConnection(conn.ToString());
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
                 SqlConnection.Open();
                 SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -41,7 +40,7 @@ namespace FinalExam.Services
             {
                 List<string> Users = new List<string>();
                 const string SqlQuery = "SELECT [login] FROM dbo.Users";
-                using var SqlConnection = new SqlConnection(conn.ToString());
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
                 SqlConnection.Open();
                 SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -60,18 +59,18 @@ namespace FinalExam.Services
         {
             try
             {
-                SqlConnection sqlConnection1 = new SqlConnection(conn.ToString());
+                SqlConnection sqlConnection1 = new SqlConnection(ConnectionStringProvider.ConnectionString);
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.CommandText = "INSERT PrivateMessages (from_user_id, to_user_id, message, create_date, is_user_in_black_list, additiounal_info, is_deleted) VALUES (@from_user_id, @to_user_id, @message, @create_date, @is_user_in_black_list, @additional_info, @is_deleted)";
                 cmd.Parameters.Add(new SqlParameter("from_user_id", Sender.Id));
                 cmd.Parameters.Add(new SqlParameter("to_user_id", Recepient.Id));
-                cmd.Parameters.Add(new SqlParameter("from_user_id", Sender.Id));
-                cmd.Parameters.Add(new SqlParameter("from_user_id", Sender.Id));
-                cmd.Parameters.Add(new SqlParameter("from_user_id", Sender.Id));
-                cmd.Parameters.Add(new SqlParameter("from_user_id", Sender.Id));
-                cmd.Parameters.Add(new SqlParameter("from_user_id", Sender.Id));
+                cmd.Parameters.Add(new SqlParameter("message", Message));
+                cmd.Parameters.Add(new SqlParameter("create_date", DateTime.Now));
+                cmd.Parameters.Add(new SqlParameter("is_user_in_black_list", false));
+                cmd.Parameters.Add(new SqlParameter("additional_info", ""));
+                cmd.Parameters.Add(new SqlParameter("is_deleted", false));
                 cmd.Connection = sqlConnection1;
 
                 sqlConnection1.Open();

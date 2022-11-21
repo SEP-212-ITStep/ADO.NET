@@ -6,17 +6,9 @@ using System.Threading.Tasks;
 
 namespace FinalExam.Services
 {
-    internal class ConnectionString
+    public static class ConnectionStringProvider
     {
-        public string connectionString = "Server=127.0.0.1;Database=ChatDb;Trusted_Connection=True;Encrypt=false";
-        public override string ToString()
-        {
-            return connectionString;
-        }
-
-        public ConnectionString()
-        {
-
-        }
+        public const string connectionString = "Server=ASIRUSH-NTBOOK;Database=ChatDb;Trusted_Connection=True;Encrypt=false";
+        public static string ConnectionString { get; } = connectionString;
     }
 }
