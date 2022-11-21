@@ -10,7 +10,7 @@ namespace gamesDz
 {
     public class GamesContext : DbContext
     {
-        public string Path = "Server = DESKTOP-B19C890\\MSSQLSERVER03; Database = GamesDatabase; " + "Trusted_Connection = true; Encrypt = false";
+        public string Path = "Server = LAPTOP-EGOR\\EGOR_SQL_SERVER; Database = GamesDatabase; " + "Trusted_Connection = true; Encrypt = false";
         public DbSet<Games> games { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
