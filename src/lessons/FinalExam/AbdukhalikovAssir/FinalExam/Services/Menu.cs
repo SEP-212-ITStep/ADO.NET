@@ -8,10 +8,6 @@ using System.Threading.Tasks;
 
 namespace FinalExam.Services
 {
-    public class UserNotFoundException : Exception
-    {
-
-    }
     internal class Menu
     {
         public void ChatMenu()
