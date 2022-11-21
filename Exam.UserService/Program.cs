@@ -88,8 +88,10 @@ namespace Exam.UserService
         }
         //static string GetAllUsers()
         //{
-
+        //    Console.WriteLine();
         //}
     }
 
 }
+
+
