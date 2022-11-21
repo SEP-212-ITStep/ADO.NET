@@ -10,6 +10,7 @@ namespace FinalExam.Services
 {
     internal class Menu
     {
+
         public void ChatMenu()
         {
             UserServices userService = new UserServices();
@@ -39,22 +40,19 @@ namespace FinalExam.Services
                         login_r = Console.ReadLine();
                         Console.Write("Enter password: ");
                         password_r = Console.ReadLine();
-                        if (userService.Registration(DbContext, login_r, password_r)) { UserMenu(userService.SignIn(login_r, password_r)); };
+                        if (userService.Registration(login_r, password_r)!=null) { UserMenu(userService.SignIn(login_r, password_r)); };
                         break;
                 }
-            }
-            catch (UserNotFoundException e)
-            {
-                ChatMenu();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
         }
-        public void UserMenu(bool signIn)
+
+        public void UserMenu(User user)
         {
-            if (signIn == true)
+            if (user != null)
             {
                 Console.WriteLine("1. Send message to user");
                 Console.WriteLine("2. Send message to group");
@@ -65,7 +63,7 @@ namespace FinalExam.Services
                 switch (ch)
                 {
                     case 1:
-
+                        MessagesMenu(user);
                         break;
                     case 2:
 
@@ -81,6 +79,12 @@ namespace FinalExam.Services
                         break;
                 }
             }
+        }
+
+        public void MessagesMenu(User user)
+        {
+            Messages tmp = new Messages();
+            tmp.SendPrivateMessage(user, "hello", user);
         }
     }
 }

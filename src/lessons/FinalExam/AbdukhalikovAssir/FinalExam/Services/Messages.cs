@@ -11,36 +11,76 @@ namespace FinalExam.Services
 {
     internal class Messages
     {
-        const string ConnectionString = "Server=127.0.0.1;Database=ChatDb;Trusted_Connection=True;Encrypt=false";
-        public List<User> GetActiveUsers()
+        ConnectionString conn = new();
+
+        public List<User> GetActiveUsersList()
         {
             try
             {
-                List<User> UserLogins = new List<User>();
+                List<User> Users = new List<User>();
                 const string SqlQuery = "SELECT * FROM dbo.Users";
-                using var SqlConnection = new SqlConnection(ConnectionString);
+                using var SqlConnection = new SqlConnection(conn.ToString());
                 SqlConnection.Open();
                 SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     var user = new User();
-                    user.Id = reader.GetInt(0);
+                    user.Id = reader.GetInt32(0);
                     user.Login= reader.GetString(1);
-                    user.Password= reader.GetString(2);
-                    UserLogins.Add(userLogin);
+                    user.Password = "";
+                    Users.Add(user);
                 }
-                return UserLogins;
+                return Users;
             }
             catch(Exception ex) { Console.WriteLine(String.Format("Error: GetActiveUsers, {0}", ex.Message)); return null; }
         }
-        public bool SendPrivateMessage(string UserLogin, string Message, User Recepient)
+
+        public List<string> GetActiveUsers() {
+            try
+            {
+                List<string> Users = new List<string>();
+                const string SqlQuery = "SELECT [login] FROM dbo.Users";
+                using var SqlConnection = new SqlConnection(conn.ToString());
+                SqlConnection.Open();
+                SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string user = new string("");
+                    user = reader.GetString(0);
+                    Users.Add(user);
+                }
+                return Users;
+            }
+            catch (Exception ex) { Console.WriteLine(String.Format("Error: GetActiveUsers, {0}", ex.Message)); return null; }
+        }
+
+        public bool SendPrivateMessage(User Sender, string Message, User Recepient)
         {
             try
             {
+                SqlConnection sqlConnection1 = new SqlConnection(conn.ToString());
 
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "INSERT PrivateMessages (from_user_id, to_user_id, message, create_date, is_user_in_black_list, additiounal_info, is_deleted) VALUES (@from_user_id, @to_user_id, @message, @create_date, @is_user_in_black_list, @additional_info, @is_deleted)";
+                cmd.Parameters.Add(new SqlParameter("from_user_id", Sender.Id));
+                cmd.Parameters.Add(new SqlParameter("to_user_id", Recepient.Id));
+                cmd.Parameters.Add(new SqlParameter("from_user_id", Sender.Id));
+                cmd.Parameters.Add(new SqlParameter("from_user_id", Sender.Id));
+                cmd.Parameters.Add(new SqlParameter("from_user_id", Sender.Id));
+                cmd.Parameters.Add(new SqlParameter("from_user_id", Sender.Id));
+                cmd.Parameters.Add(new SqlParameter("from_user_id", Sender.Id));
+                cmd.Connection = sqlConnection1;
+
+                sqlConnection1.Open();
+                cmd.ExecuteNonQuery();
+                sqlConnection1.Close();
+
+                return true;
             }
-            catch(Exception ex) { }
+            catch(Exception ex) { Console.WriteLine(String.Format("Error: Sending message {0}", ex.Message)); return false; }
         }
     }
 }
