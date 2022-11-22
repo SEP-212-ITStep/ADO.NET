@@ -83,6 +83,9 @@ namespace FinalExam.Services
 
         public void MessagesMenu(User user)
         {
+            Console.Clear();
+            Console.WriteLine("Select recepient: ");
+
             Messages tmp = new Messages();
             tmp.SendPrivateMessage(user, "hello", user);
         }
