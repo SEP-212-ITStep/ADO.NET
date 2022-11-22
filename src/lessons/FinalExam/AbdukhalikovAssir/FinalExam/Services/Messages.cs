@@ -12,6 +12,68 @@ namespace FinalExam.Services
 {
     internal class Messages
     {
+        public void ShowChats(User user)
+        {
+            try
+            {
+                Console.WriteLine("Private chats:");
+                Console.WriteLine("--------------");
+                ShowPrivateChats(user);
+                Console.WriteLine("");
+                Console.WriteLine("Group chats:");
+                CheckUsersGroups(user);
+                                
+            }
+            catch(Exception ex) { Console.Clear(); Console.WriteLine("Error: chatshowing error {0}", ex.Message); }
+        }
+        public List<int> CheckUsersGroupsIds(User user)
+        {
+            try
+            {
+                List<int> groups = new List<int>();
+                const string SqlQuery = "SELECT group_id FROM UserGroups JOIN Groups ON UserGroups.group_id = Groups.id WHERE user_id = @user_id;";
+                using (SqlConnection connection = new SqlConnection(ConnectionStringProvider.ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand(SqlQuery, connection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@user_id", user.Id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        int groupId = new();
+                        groupId = reader.GetInt32(0);
+                        groups.Add(groupId);
+                    }
+                    return groups;
+                }
+            }
+            catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: checking groups {0}", ex.Message); return null; }
+        }
+        public List<string> CheckUsersGroups(User user)
+        {
+            try
+            {
+                List<string> groups = new List<string>();
+                const string SqlQuery = "SELECT name FROM UserGroups JOIN Groups ON UserGroups.group_id = Groups.id WHERE user_id = @user_id;";
+                using (SqlConnection connection = new SqlConnection(ConnectionStringProvider.ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand(SqlQuery, connection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@user_id", user.Id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        string chat = new("");
+                        chat = reader.GetString(0);
+                        groups.Add(chat);
+                    }
+                    return groups;
+                }
+            }
+            catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: checking groups {0}", ex.Message); return null; }
+        }
         public List<string> ShowPrivateChats(User user)
         {
             try
@@ -33,11 +95,9 @@ namespace FinalExam.Services
                     }
                     return messages;
                 }
-                return null;
             }
             catch(Exception ex) { Console.WriteLine("Error: Chat Selection Error {0}", ex.Message); return null; }
         }
-
         public List<User> GetActiveUsersList()
         {
             try
@@ -60,7 +120,6 @@ namespace FinalExam.Services
             }
             catch(Exception ex) { Console.WriteLine(String.Format("Error: GetActiveUsers, {0}", ex.Message)); return null; }
         }
-
         public List<string> GetActiveUsers() {
             try
             {
@@ -80,7 +139,6 @@ namespace FinalExam.Services
             }
             catch (Exception ex) { Console.WriteLine(String.Format("Error: GetActiveUsers, {0}", ex.Message)); return null; }
         }
-
         public bool SendPrivateMessage(User Sender, string Message, User Recepient)
         {
             try
@@ -107,7 +165,6 @@ namespace FinalExam.Services
             }
             catch(Exception ex) { Console.WriteLine(String.Format("Error: Sending message {0}", ex.Message)); return false; }
         }
-
         public bool SendGroupMessage(User sender, string message, int groupId)
         {
             try
