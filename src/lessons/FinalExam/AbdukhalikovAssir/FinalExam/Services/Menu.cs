@@ -19,9 +19,11 @@ namespace FinalExam.Services
 
             try
             {
+                Console.Clear();
                 Console.WriteLine("Welcome!");
                 Console.WriteLine("1. Sign in");
                 Console.WriteLine("2. Sign up ");
+                Console.Write("chat: ");
                 int ch = Int32.Parse(Console.ReadLine());
                 switch (ch)
                 {
@@ -54,11 +56,13 @@ namespace FinalExam.Services
         {
             if (user != null)
             {
+                Console.Clear();
                 Console.WriteLine("1. Send message to user");
                 Console.WriteLine("2. Send message to group");
                 Console.WriteLine("3. Add group");
                 Console.WriteLine("4. Block user");
                 Console.WriteLine("0. Log out");
+                Console.Write("chat: ");
                 int ch = int.Parse(Console.ReadLine());
                 switch (ch)
                 {
@@ -75,7 +79,6 @@ namespace FinalExam.Services
 
                         break;
                     case 0:
-
                         break;
                 }
             }
@@ -85,9 +88,9 @@ namespace FinalExam.Services
         {
             Console.Clear();
             Console.WriteLine("Select recepient: ");
-
             Messages tmp = new Messages();
-            tmp.SendPrivateMessage(user, "hello", user);
+            tmp.ShowPrivateChats(user);
+            
         }
     }
 }

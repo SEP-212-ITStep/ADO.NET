@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +12,31 @@ namespace FinalExam.Services
 {
     internal class Messages
     {
+        public List<string> ShowPrivateChats(User user)
+        {
+            try
+            {
+                List<string> messages = new List<string>();
+                const string SqlQuery = "SELECT * FROM PrivateMessages WHERE from_user_id = @user_id OR to_user_id = @user_id;";
+                using (SqlConnection connection = new SqlConnection(ConnectionStringProvider.ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand(SqlQuery, connection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@user_id", user.Id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        string chat = new("");
+                        chat = reader.GetString(0);
+                        messages.Add(chat);
+                    }
+                    return messages;
+                }
+                return null;
+            }
+            catch(Exception ex) { Console.WriteLine("Error: Chat Selection Error {0}", ex.Message); return null; }
+        }
 
         public List<User> GetActiveUsersList()
         {
@@ -80,6 +106,16 @@ namespace FinalExam.Services
                 return true;
             }
             catch(Exception ex) { Console.WriteLine(String.Format("Error: Sending message {0}", ex.Message)); return false; }
+        }
+
+        public bool SendGroupMessage(User sender, string message, int groupId)
+        {
+            try
+            {
+
+                return true;
+            }
+            catch(Exception ex) { Console.WriteLine(ex.Message); return false; }
         }
     }
 }

@@ -11,6 +11,26 @@ namespace FinalExam.Services
 {
     internal class UserServices
     {
+        public int GetUserId(string userName)
+        {
+            try
+            {
+                int result = new();
+                const string SqlQuery = "SELECT id FROM dbo.Users WHERE login = @userName";
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
+                SqlConnection.Open();
+                SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
+                cmd.Parameters.AddWithValue("@groupName", userName);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    result = reader.GetInt32(0);
+                }
+                return result;
+
+            }
+            catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: User Id is not recognized {0}", ex.Message); return 0; }
+        }
         public User Registration(string Login, string Password)
         {
             try
