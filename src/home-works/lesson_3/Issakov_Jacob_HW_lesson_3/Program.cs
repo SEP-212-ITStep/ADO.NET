@@ -7,6 +7,7 @@ using System.Data;
 using System.Reflection.PortableExecutable;
 using System.Reflection;
 using System.Collections;
+using System.Threading.Tasks.Dataflow;
 
 namespace Issakov_Jacob_HW_lesson_3
 {
@@ -17,58 +18,46 @@ namespace Issakov_Jacob_HW_lesson_3
             const string connectionString = "Server=DESKTOP-6O1ENUJ;Database=Cars_Show_Room;" +
                 "Trusted_Connection=true;Encrypt=false;";
 
-            // Task 2
 
-            //try
-            //{
-            //    Console.ForegroundColor = ConsoleColor.Red;
-            //    using var sqlConnection = new SqlConnection(connectionString);
-            //    sqlConnection.Open();
-            //    Console.WriteLine($"Connected DB: {sqlConnection.Database}");
-            //    Console.WriteLine("1 - Close connection");
-            //    string response = Console.ReadLine();
-            //    if (response == "1")
-            //    {
-            //        sqlConnection.Close();
-            //        Console.WriteLine("The connection was successfully closed");
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            //    Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            //    Console.WriteLine("Подключение к базе прошло не успешно");
-            //}
+
+
 
             ShowMenu();
             int ch = Convert.ToInt32(Console.ReadLine());
             switch (ch)
             {
                 case 1:
+                    //a.Показать все модели за введенный год(к примеру 2002, 2012, 2022)
                     Console.WriteLine("Enter year: ");
                     int year = Convert.ToInt32(Console.ReadLine());
                     SelectYear(connectionString, year);
                     break;
                 case 2:
-                    ShowAll(connectionString);
-                    Console.WriteLine("Choose model from the list: ");
+                    //b.Выбрать конкретную машину под номером модели и года
+                    Console.WriteLine("Enter the model name: ");
                     string model = Console.ReadLine();
                     Console.WriteLine("Enter year: ");
                     year = Convert.ToInt32(Console.ReadLine());
                     SelectModelAndYear(connectionString, model, year);
                     break;
                 case 3:
+                    //i.Показать Базовые характеристики выбранного автомобиля
                     ShowAll(connectionString);
                     Console.WriteLine("Choose model from the list: ");
                     model = Console.ReadLine();
                     BaseСharacteristics(connectionString, model);
                     break;
                 case 4:
+                    //ii.Внести дополнительную информацию по машине(SqlUpdateCommand)
                     Update(connectionString);
                     break;
                 case 5:
+                    //c.Добавить новую машину(SqlInsertCommand)
                     Add(connectionString);
                     break;
-
+                case 6:
+                    Delete(connectionString);
+                    break;
             }
         }
 
@@ -79,11 +68,11 @@ namespace Issakov_Jacob_HW_lesson_3
             Console.WriteLine("\n3 - Показать Базовые характеристики выбранного автомобиля");
             Console.WriteLine("\n4 - Внести дополнительную информацию по машине (SqlUpdateCommand)");
             Console.WriteLine("\n5 - Добавить новую машину (SqlInsertCommand)");
-
+            Console.WriteLine("\n6 - Удалить машину");
         }
         static void SelectYear(string connectionString, int year)
         {
-            string sqlQuery = $"SELECT * FROM dbo.Car WHERE age='{year}'";
+            string sqlQuery = $"SELECT * FROM dbo.Car WHERE age={year}";
             using var sqlConnection = new SqlConnection(connectionString);
             sqlConnection.Open();
             using var sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
@@ -128,15 +117,16 @@ namespace Issakov_Jacob_HW_lesson_3
         }
         public static void BaseСharacteristics(string connectionString, string model)
         {
-            string sqlQuery = $"SELECT * FROM dbo.Сharacteristics WHERE model='{model}'";
+            string sqlQuery = $"SELECT * FROM Characteristics WHERE model='{model}'";
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, connectionString);
-            DataSet ds = new DataSet();
+            DataSet ds = new DataSet("Cars_Show_Room");
             da.Fill(ds, "dbo.Сharacteristics");
             DataTable dt = ds.Tables[0];
             foreach (DataRow item in dt.Rows)
             {
                 Console.WriteLine($"speed: {item["speed"].ToString()}, ATH: {item["ATH"].ToString()}, " +
-                    $"Horse_Power: {item["Horse_Power"].ToString()}, Weight: {item["Weight"].ToString()}, Color: {item["Color"].ToString()}");
+                                  $"Horse_Power: {item["Horse_Power"].ToString()}, Weight: {item["Weight"].ToString()}, " +
+                                  $"Color: {item["Color"].ToString()}");
 
             }
         }
@@ -151,43 +141,77 @@ namespace Issakov_Jacob_HW_lesson_3
             string c = Console.ReadLine();
             Console.WriteLine("Write new value: ");
             string new_value = Console.ReadLine();
-            string sqlQuery = $"SELECT * FROM dbo.Сharacteristics WHERE model='{model}'";
+            string sqlQuery;
+            if (c == "Color" || c == "Model" || c == "ATH")
+                sqlQuery = $"UPDATE Characteristics SET {c} = '{new_value}' WHERE model='{model}'";
+            else
+                sqlQuery = $"UPDATE Characteristics SET {c} = {new_value} WHERE model='{model}'";
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, connectionString);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "dbo.Characteristics");
-            DataTable table = ds.Tables[0];
-            switch (c)
-            {
-                case "speed":
-                    table.Rows[0][c] = Convert.ToDouble(new_value);
-                    break;
-                case "ATH":
-                    table.Rows[0][c] = Convert.ToDouble(new_value);
-                    break;
-                case "Horse_Power":
-                    table.Rows[0][c] = Convert.ToInt32(new_value);
-                    break;
-                default:
-                    table.Rows[0][c] = new_value;
-                    break;
-            }
+            DataSet ds = new DataSet("dbo.Characteristics");
+            da.Fill(ds);
         }
         public static void Add(string connectionString)
         {
-            Console.WriteLine("Enter the brand: ");
-            string brand = Console.ReadLine();
+            try
+            {
+                Console.WriteLine("Enter the brand: ");
+                string brand = Console.ReadLine();
+                Console.WriteLine("Enter the model: ");
+                string model = Console.ReadLine();
+                Console.WriteLine("Enter the age: ");
+                int age = Convert.ToInt32(Console.ReadLine());
+                string sqlQuery = $"INSERT INTO Car (Brand, Model, Age) VALUES ('{brand}', '{model}', {age})";
+                SqlDataAdapter da = new SqlDataAdapter(sqlQuery, connectionString);
+                DataSet ds = new DataSet("dbo.Car");
+                da.Fill(ds);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            try
+            {
+                Console.WriteLine("Now enter please base characteristics: ");
+                Console.WriteLine("Enter the speed: ");
+                string speed_ = Console.ReadLine();
+                int speed = Convert.ToInt32(speed_);
+                Console.WriteLine("Enter the ATH: ");
+                string ATH = Console.ReadLine();
+                Console.WriteLine("Enter the horse power: ");
+                string horsePower_ = Console.ReadLine();
+                int horsePower = Convert.ToInt32(horsePower_);
+                Console.WriteLine("Enter the weight: ");
+                string weight_ = Console.ReadLine();
+                int weight = Convert.ToInt32(weight_);
+                Console.WriteLine("Enter the color: ");
+                string color = Console.ReadLine();
+                Console.WriteLine("Enter the model: ");
+                string model2 = Console.ReadLine();
+                string sqlQuery2 = $"INSERT INTO Characteristics (Speed, ATH, Horse_Power, Weight, Color, Model) " +
+                    $"VALUES ({speed}, '{ATH}', {horsePower}, {weight}, '{color}', '{model2}')";
+                SqlDataAdapter da = new SqlDataAdapter(sqlQuery2, connectionString);
+                DataSet ds = new DataSet("dbo.Characteristics");
+                da.Fill(ds);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public static void Delete(string connectionString)
+        {
             Console.WriteLine("Enter the model: ");
             string model = Console.ReadLine();
-            Console.WriteLine("Enter the age: ");
-            int age = Convert.ToInt32(Console.ReadLine());
-            string sqlQuery = $"SELECT * FROM dbo.Car";
+            string sqlQuery = $"DELETE FROM Car WHERE Model='{model}'";
+            string sqlQuery2 = $"DELETE FROM Characteristics WHERE Model='{model}'";
             SqlDataAdapter da = new SqlDataAdapter(sqlQuery, connectionString);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Car");
-            DataRow dr = ds.Tables["Car"].NewRow();
-            dr["Brand"] = brand;
-            dr["Model"] = model;
-            dr["Age"] = age;
+            DataSet ds = new DataSet("dbo.Car");
+            da.Fill(ds);
+            da = new SqlDataAdapter(sqlQuery2, connectionString);
+            ds = new DataSet("dbo.Characteristics");
+            da.Fill(ds);
         }
     }
 }
