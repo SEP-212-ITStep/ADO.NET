@@ -8,7 +8,7 @@ namespace FinalExam.Services
 {
     public static class ConnectionStringProvider
     {
-        public const string connectionString = "Server=ASIRUSH-NTBOOK;Database=ChatDb;Trusted_Connection=True;Encrypt=false";
+        public const string connectionString = "Server=185.213.156.185;Database=ChatDb;User Id=student;Password=123;Encrypt=false";
         public static string ConnectionString { get; } = connectionString;
     }
 }

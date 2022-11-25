@@ -21,7 +21,7 @@ namespace FinalExam.Services
                 using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
                 SqlConnection.Open();
                 SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
-                cmd.Parameters.AddWithValue("@owner_id", CreatorId);
+                cmd.Parameters.AddWithValue("@ownerId", CreatorId);
                 cmd.Parameters.AddWithValue("@GroupName", groupName);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -62,7 +62,8 @@ namespace FinalExam.Services
                 {
                     return false;
                 }
-                else {
+                else
+                {
                     Group group = new Group();
                     group.Owner = creator;
                     group.Name = groupName;
@@ -79,23 +80,71 @@ namespace FinalExam.Services
                     sqlConnection1.Open();
                     cmd.ExecuteNonQuery();
                     sqlConnection1.Close();
+                    Thread.Sleep(5000);
 
                     return true;
                 }
             }
-            catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: Group Creation {0}", ex.Message); return false; }
+            catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: Group Creation {0}", ex.Message); Thread.Sleep(5000); return false; }
         }
 
         public bool AddUserToAGroup(User user, string groupName)
         {
             try
             {
+                if(IsUserInGroup(user, groupName)==false)
+                {
+                    UserGroup tmp = new UserGroup();    
+                    SqlConnection sqlConnection1 = new SqlConnection(ConnectionStringProvider.ConnectionString);
 
-                return true;
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = "INSERT UserGroups (group_id, user_id) VALUES (@group_id, @user_id)";
+                    cmd.Parameters.AddWithValue("@group_id", GetGroupId(groupName));
+                    cmd.Parameters.AddWithValue("@user_id", user.Id);
+                    cmd.Connection = sqlConnection1;
+
+                    sqlConnection1.Open();
+                    cmd.ExecuteNonQuery();
+                    sqlConnection1.Close();
+
+                    return true;
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("User is already in group");
+                    Thread.Sleep(5000);
+                    return false;
+                }
             }
-            catch (Exception ex) { Console.Clear(); Console.WriteLine(ex.Message); return false; }
+            catch (Exception ex) { Console.Clear(); Console.WriteLine(ex.Message); Thread.Sleep(5000); return false; }
         }
 
-
+        public bool IsUserInGroup(User user, string groupName)
+        {
+            try
+            {
+                const string SqlQuery = "SELECT id FROM dbo.UserGroups WHERE group_id = @groupId AND user_id = @userId";
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
+                SqlConnection.Open();
+                SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
+                cmd.Parameters.AddWithValue("@groupId", GetGroupId(groupName));
+                cmd.Parameters.AddWithValue("@userId", user.Id);
+                SqlDataReader reader = cmd.ExecuteReader();
+                int counter = 0;
+                while (reader.Read())
+                {
+                    reader.GetInt32(0);
+                    counter++;
+                }
+                if (counter != 0)
+                {
+                    return true;
+                }
+                else { return false; }
+            }
+            catch(Exception ex) { Console.Clear(); Console.WriteLine("Error: cheching groups contain user"); Thread.Sleep(5000); return true; }
+        }
     }
 }

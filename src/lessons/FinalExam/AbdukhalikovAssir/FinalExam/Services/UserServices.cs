@@ -93,6 +93,7 @@ namespace FinalExam.Services
                         else
                         {
                             Console.WriteLine("Password is wrong!");
+                            Thread.Sleep(5000);
                             return null;
                         }
                     }
@@ -114,7 +115,6 @@ namespace FinalExam.Services
             catch (Exception ex) { Console.WriteLine("Error: hashing {0}", ex.Message); return ""; }
 
         }
-
         public List<User> GetActiveUsersList()
         {
             try
@@ -137,7 +137,6 @@ namespace FinalExam.Services
             }
             catch (Exception ex) { Console.WriteLine(String.Format("Error: GetActiveUsers, {0}", ex.Message)); return null; }
         }
-
         public List<string> GetActiveUsers()
         {
             try
