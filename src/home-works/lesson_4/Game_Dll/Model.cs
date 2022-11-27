@@ -35,5 +35,12 @@ namespace Game_Dll
         public int Publishing_Year { get; set; }
         public string Game_Mode { get; set; }
         public int Sales { get; set; }
+
+        public override string ToString()
+        {
+            return $"\nDeveloper: {this.Developer_Name}\nGame Name: {this.Game_Name}" +
+                   $"\nGame Style: {this.Game_Style}\nPublishing Year: {this.Publishing_Year}" +
+                   $"\nGame Mode: {this.Game_Mode}\nSales: {this.Sales}";
+        }
     }
 }
