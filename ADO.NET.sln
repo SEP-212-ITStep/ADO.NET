@@ -138,6 +138,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "db-first-approach", "src\le
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Db-First-Approach", "src\lessons\Lesson_6\Db-First-Approach\Db-First-Approach.csproj", "{055E0EBA-652A-4856-A63D-D24ADA506883}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AbdukhalikovAssir", "AbdukhalikovAssir", "{8D6D08DB-9486-45AC-B86C-782AA00CC0B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vegetables", "src\home-works\Lesson_2\AbdukhalikovAssir\vegetables\vegetables.csproj", "{3F147AA5-1655-475A-8D13-A4F6A6088CE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -232,6 +236,10 @@ Global
 		{055E0EBA-652A-4856-A63D-D24ADA506883}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{055E0EBA-652A-4856-A63D-D24ADA506883}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{055E0EBA-652A-4856-A63D-D24ADA506883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F147AA5-1655-475A-8D13-A4F6A6088CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F147AA5-1655-475A-8D13-A4F6A6088CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F147AA5-1655-475A-8D13-A4F6A6088CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F147AA5-1655-475A-8D13-A4F6A6088CE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -293,6 +301,8 @@ Global
 		{8DB949DF-CBFB-40A2-B89C-EDEE686C3F49} = {DBCFDE11-4144-4D23-A49A-98B539124246}
 		{2F9824F0-2274-4791-8E85-431E8828F559} = {310A5C20-8603-46C0-B0C4-5EA007DE7647}
 		{055E0EBA-652A-4856-A63D-D24ADA506883} = {8DB949DF-CBFB-40A2-B89C-EDEE686C3F49}
+		{8D6D08DB-9486-45AC-B86C-782AA00CC0B3} = {0B2001BC-071E-4018-9203-4018E54286A1}
+		{3F147AA5-1655-475A-8D13-A4F6A6088CE0} = {8D6D08DB-9486-45AC-B86C-782AA00CC0B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4E51D3AF-5F55-46C0-988B-B0700A22A6B7}
