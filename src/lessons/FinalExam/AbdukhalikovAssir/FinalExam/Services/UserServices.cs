@@ -66,6 +66,39 @@ namespace FinalExam.Services
                 return null;
             }
         }
+        public bool DeleteUser(string Login, string Password)
+        {
+            try
+            {
+                List<string> tmp = GetActiveUsers();
+                if (!tmp.Contains(Login))
+                {
+                    Console.WriteLine("Error: User is not registered");
+                    return false;
+                }
+                else
+                {
+                    using (SqlConnection connection = new SqlConnection(ConnectionStringProvider.ConnectionString))
+                    {
+                        connection.Open();
+                        User newUser = new User();
+                        newUser.Login = Login;
+                        newUser.Password = Password;
+                        SqlCommand cmd = connection.CreateCommand();
+                        cmd.CommandText = "DELETE FROM Users WHERE login=@Login";
+                        cmd.Parameters.AddWithValue("@Login", Login);
+                        cmd.ExecuteNonQuery();
+                        return true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: user deletion error {0}", ex.Message);
+                Console.WriteLine(ex);
+                return false;
+            }
+        }
         public User SignIn(string login, string password)
         {
             try
