@@ -261,7 +261,19 @@ namespace FinalExam.Services
         {
             try
             {
-
+                List<string> messages = new List<string>();
+                const string SqlQuery = "select Groups.name, Users.login, GroupMessages.create_date, GroupMessages.message from GroupMessages JOIN Users ON GroupMessages.user_id = Users.id JOIN Groups ON Groups.id = GroupMessages.group_id;";
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
+                SqlConnection.Open();
+                SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string user = new string("");
+                    user = reader.GetString(0);
+                    Users.Add(user);
+                }
+                return messages;
             }
             catch (Exception ex) { Console.WriteLine("Error: getting group messages, {0}", ex.Message); }
         }
