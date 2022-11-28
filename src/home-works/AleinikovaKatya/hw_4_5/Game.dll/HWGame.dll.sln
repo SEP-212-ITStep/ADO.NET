@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWGame.dll", "HWGame.dll.csproj", "{B657A8BE-8FA0-4630-B724-E76EA0F23A3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWGame", "..\HWGame\HWGame.csproj", "{C8FD60E0-FD85-4A63-81A2-4FD5BE2C5D46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B657A8BE-8FA0-4630-B724-E76EA0F23A3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B657A8BE-8FA0-4630-B724-E76EA0F23A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B657A8BE-8FA0-4630-B724-E76EA0F23A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B657A8BE-8FA0-4630-B724-E76EA0F23A3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8FD60E0-FD85-4A63-81A2-4FD5BE2C5D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8FD60E0-FD85-4A63-81A2-4FD5BE2C5D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8FD60E0-FD85-4A63-81A2-4FD5BE2C5D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8FD60E0-FD85-4A63-81A2-4FD5BE2C5D46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EC7EB34-A7EC-498F-AFA3-E38BD91D4DD7}
+	EndGlobalSection
+EndGlobal
