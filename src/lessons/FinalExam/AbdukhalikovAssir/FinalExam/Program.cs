@@ -12,7 +12,7 @@ namespace FinalExam
         {
             label1:
             Menu start = new();
-            start.ChatMenu();
+            start.AuthMenu();
         }
     }
 }

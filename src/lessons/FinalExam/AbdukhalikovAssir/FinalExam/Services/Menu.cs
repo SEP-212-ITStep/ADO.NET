@@ -12,7 +12,7 @@ namespace FinalExam.Services
     internal class Menu
     {
 
-        public void ChatMenu()
+        public void AuthMenu()
         {
             UserServices userService = new UserServices();
             using var DbContext = new ChatDbContext();
@@ -36,7 +36,7 @@ namespace FinalExam.Services
                         password = Console.ReadLine();
                         User test = userService.SignIn(login, password);
                         if (test != null) { UserMenu(test); }
-                        else { ChatMenu(); }
+                        else { AuthMenu(); }
                         break;
                     case 2:
                         string login_r = ""; string password_r = "";
@@ -44,7 +44,7 @@ namespace FinalExam.Services
                         login_r = Console.ReadLine();
                         Console.Write("Enter password: ");
                         password_r = Console.ReadLine();
-                        if (userService.Registration(login_r, password_r)!=null) { UserMenu(userService.SignIn(login_r, password_r)); };
+                        if (userService.Registration(login_r, password_r) != null) { UserMenu(userService.SignIn(login_r, password_r)); };
                         break;
                 }
             }
@@ -53,7 +53,6 @@ namespace FinalExam.Services
                 Console.WriteLine(ex.Message);
             }
         }
-
         public void UserMenu(User user)
         {
             if (user != null)
@@ -80,51 +79,81 @@ namespace FinalExam.Services
                     case 3:
                         break;
                     case 0:
-                        ChatMenu();
+                        AuthMenu();
                         break;
                 }
             }
         }
-
         public void MessagesMenu(User user)
         {
             try
             {
+                Messages msg = new();
                 Console.Clear();
-                Console.WriteLine("1. Show Messages");
-                Console.WriteLine("2. Create Message");
-                Console.WriteLine("0. Go Back");
-                Console.Write("{0}: ", user.Login);
-
-                int ch = int.Parse(Console.ReadLine());
-                switch (ch)
+                int flag = 1;
+                List<Chat> chats = new List<Chat>();
+                List<User> users = msg.GetActiveUsersList();
+                List<Group> groups = msg.CheckUsersGroupsList(user);
+                Console.WriteLine("Private chats: ");
+                foreach (var item in users)
                 {
-                    case 1:
-                        Messages msgs = new Messages();
-                        int k = 0;
-                        Console.WriteLine("Private Chats:");
-                        foreach (var tmp in msgs.ShowPrivateChats(user))
-                        {
-                            Console.WriteLine("{0}. {1}", k, tmp);
-                        }
-
-                        Groups grps = new Groups();
-                        Console.WriteLine("Group Messages: ");
-
-
-                        if (Console.ReadLine() != null) { MessagesMenu(user); }
-                        break;
-
-                    case 2:
-
-                        break;
-
-                    case 0:
-                        UserMenu(user);
-                        break;
+                    Console.WriteLine("{0}. {1}", flag, item.Login);
+                    flag++;
+                }
+                Console.WriteLine("Groups: ");
+                foreach (var item in groups)
+                {
+                    Console.WriteLine("{0}. {1}", flag, item.Name);
+                    flag++;
+                }
+                
+                Console.Write("{0}: ", user.Login); int setFlag = Console.Read();
+                
+                int flag2 = 1;
+                foreach (var item in users)
+                {
+                    if (flag2 == setFlag)
+                    {
+                        ChatMenu(user, item);
+                    }
+                    else { flag2++; }
+                }
+                foreach (var item in groups)
+                {
+                    if (flag2 == setFlag)
+                    {
+                        GroupChatMenu(user, item.Name);
+                    }
+                    else { flag2++; }
                 }
             }
             catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: messages menu {0}", ex.Message); }
+        }
+        public void ChatMenu(User user, User recepient)
+        {
+            try
+            {
+                Messages msg = new();
+                string Comnd = "";
+                while (Comnd != "q" || Comnd != "w")
+                {
+                    msg.GetPrivateMessages(user, recepient);
+                    Console.WriteLine("Commands: u - update, w - write message, q - quit chat");
+                    Console.Write("{0}: ", user.Login);
+                    string answer = Console.ReadLine();
+                    if (answer == "u")
+                    {
+                        ChatMenu(user, recepient);
+                    }
+                    if (answer == "w") { Console.Write("{0}: ", user.Login); string mssg = Console.ReadLine(); msg.SendPrivateMessage(user, mssg, recepient); ChatMenu(user, recepient); }
+                    if (answer == "q") { Console.Clear(); MessagesMenu(user); }
+                }
+            }
+            catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: {0}", ex.Message); }
+        }
+        public void GroupChatMenu(User user, string groupName)
+        {
+
         }
     }
 }

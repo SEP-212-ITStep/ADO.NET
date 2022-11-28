@@ -78,6 +78,38 @@ namespace FinalExam.Services
             }
             catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: checking groups {0}", ex.Message); return null; }
         }
+        public List<Group> CheckUsersGroupsList(User user)
+        {
+            try
+            {
+                List<Group> groups = new List<Group>();
+                const string SqlQuery = "SELECT Groups.id, Groups.name FROM UserGroups JOIN Groups ON UserGroups.group_id = Groups.id WHERE user_id = @user_id;";
+                using (SqlConnection connection = new SqlConnection(ConnectionStringProvider.ConnectionString))
+                {
+                    connection.Open();
+                    SqlCommand cmd = new SqlCommand(SqlQuery, connection);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@user_id", user.Id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        int id = new();
+                        string groupName = new("");
+                        int ownerId = new();
+                        id = reader.GetInt32(0);
+                        groupName = reader.GetString(1);
+                        ownerId = reader.GetInt32(2);
+                        Group tmp = new();
+                        tmp.Id = id;
+                        tmp.Name = groupName;
+                        tmp.OwnerId = ownerId;
+                        groups.Add(tmp);
+                    }
+                    return groups;
+                }
+            }
+            catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: checking groups {0}", ex.Message); return null; }
+        }
         public List<string> ShowPrivateChats(User user)
         {
             try
@@ -212,16 +244,17 @@ namespace FinalExam.Services
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); return false; }
         }
-        public List<PrivateMessage> GetPrivateMessages(User user)
+        public List<PrivateMessage> GetPrivateMessages(User user, User recepient)
         {
             try
             {
                 List<PrivateMessage> pm = new List<PrivateMessage>();
-                const string SqlQuery = "SELECT from_user_id, to_user_id, message, create_date FROM dbo.PrivateMessages WHERE from_user_id=@user OR to_user_id=@user";
+                const string SqlQuery = "SELECT from_user_id, to_user_id, message, create_date FROM dbo.PrivateMessages WHERE from_user_id=@user AND to_user_id=@recepient OR from_user_id=@recepient AND to_user_id=@user";
                 using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
                 SqlConnection.Open();
                 SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
                 cmd.Parameters.AddWithValue("@user", user.Id);
+                cmd.Parameters.AddWithValue("@recepient", recepient.Id);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -257,7 +290,7 @@ namespace FinalExam.Services
             }
             catch (Exception ex) { Console.WriteLine(); Console.WriteLine("Error: getting user from db, {0}", ex.Message); return null; }
         }
-        public List<string> GetGroupMessages(User user, int group_id)
+        /*public List<string> GetGroupMessages(User user, int group_id)
         {
             try
             {
@@ -276,6 +309,6 @@ namespace FinalExam.Services
                 return messages;
             }
             catch (Exception ex) { Console.WriteLine("Error: getting group messages, {0}", ex.Message); }
-        }
+        }*/
     }
 }
