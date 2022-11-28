@@ -194,7 +194,7 @@ namespace FinalExam.Services
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = System.Data.CommandType.Text;
-                cmd.CommandText = "INSERT PrivateMessages (from_user_id, to_user_id, message, create_date, is_user_in_black_list, additiounal_info, is_deleted) VALUES (@from_user_id, @to_user_id, @message, @create_date, @is_user_in_black_list, @additional_info, @is_deleted)";
+                cmd.CommandText = "INSERT PrivateMessages (from_user_id, to_user_id, message, create_date, is_user_in_black_list, additional_info, is_deleted) VALUES (@from_user_id, @to_user_id, @message, @create_date, @is_user_in_black_list, @additional_info, @is_deleted)";
                 cmd.Parameters.Add(new SqlParameter("@from_user_id", Sender.Id));
                 cmd.Parameters.Add(new SqlParameter("@to_user_id", Recepient.Id));
                 cmd.Parameters.Add(new SqlParameter("@message", Message));
@@ -243,7 +243,7 @@ namespace FinalExam.Services
             try
             {
                 List<PrivateMessage> pm = new List<PrivateMessage>();
-                const string SqlQuery = "SELECT from_user_id, to_user_id, message, create_date FROM dbo.PrivateMessages WHERE from_user_id=@user AND to_user_id=@recepient OR from_user_id=@recepient AND to_user_id=@user";
+                const string SqlQuery = "SELECT from_user_id, to_user_id, message, create_date FROM dbo.PrivateMessages WHERE (from_user_id=@user AND to_user_id=@recepient) OR (from_user_id=@recepient AND to_user_id=@user);";
                 using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
                 SqlConnection.Open();
                 SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
@@ -272,7 +272,7 @@ namespace FinalExam.Services
                 using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
                 SqlConnection.Open();
                 SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
-                cmd.Parameters.AddWithValue("@name", groupName);
+                cmd.Parameters.AddWithValue("@groupName", groupName);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -280,6 +280,7 @@ namespace FinalExam.Services
                     message += reader.GetString(0) + " ";
                     message += reader.GetString(1) + " ";
                     message += reader.GetDateTime(3).ToString() + " ";
+                    groupMessages.Add(message);
                 }
                 return groupMessages;
             }

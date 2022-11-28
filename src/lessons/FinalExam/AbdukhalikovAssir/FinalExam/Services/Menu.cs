@@ -81,7 +81,12 @@ namespace FinalExam.Services
                         break;
                     case 3:
                         Console.Clear();
-                        
+                        AddUser(user);
+                        UserMenu(user);
+                        break;
+                    case 4: 
+                        Console.Clear();
+                        UserMenu(user);
                         break;
                     case 0:
                         AuthMenu();
@@ -144,7 +149,7 @@ namespace FinalExam.Services
                 Console.WriteLine("--------------");
                 foreach (var item in groups) {Console.WriteLine("{0}. {1}", list_counter, item.Name); list_counter++; group_counter++; }
                 
-                int answer = 0; Console.WriteLine("{0}:", user.Login); answer = Console.Read();
+                int answer = int.Parse(Console.ReadLine());
 
                 if(answer <= user_counter)
                 {
@@ -166,7 +171,7 @@ namespace FinalExam.Services
                         }
                     }
                 }
-                
+                UserMenu(user);
             }
             catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: messages menu {0}", ex.Message); }
         }
@@ -174,12 +179,13 @@ namespace FinalExam.Services
         {
             try
             {
-                Console.WriteLine("hello");
                 Messages msg = new();
                 string Comnd = "";
                 while (Comnd != "q" || Comnd != "w")
                 {
-                    msg.GetPrivateMessages(user, recepient);
+                    Console.Clear();
+                    List<PrivateMessage> history = msg.GetPrivateMessages(user, recepient);
+                    foreach (var item in history) { Console.WriteLine("{0}| {1} {2} {3}", item.FromUser.Login, item.ToUser.Login, item.CreateDate.ToString(), item.Message); }
                     Console.WriteLine("Commands: u - update, w - write message, q - quit chat");
                     Console.Write("{0}: ", user.Login);
                     string answer = Console.ReadLine();
@@ -187,9 +193,13 @@ namespace FinalExam.Services
                     {
                         ChatMenu(user, recepient);
                     }
-                    if (answer == "w") { Console.Write("{0}: ", user.Login); string mssg = Console.ReadLine(); msg.SendPrivateMessage(user, mssg, recepient); ChatMenu(user, recepient); }
-                    if (answer == "q") { Console.Clear(); MessagesMenu(user); }
+                    if (answer == "w") { Console.Write("{0} message: ", user.Login); string mssg = Console.ReadLine(); msg.SendPrivateMessage(user, mssg, recepient); ChatMenu(user, recepient); }
+                    if (answer == "q")
+                    {
+                        Console.Clear(); MessagesMenu(user);
+                    }
                 }
+                MessagesMenu(user);
             }
             catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: {0}", ex.Message); }
         }
@@ -201,7 +211,10 @@ namespace FinalExam.Services
                 string Comnd = "";
                 while (Comnd != "q" || Comnd != "w")
                 {
-                    msg.GetGroupMessages(user, groupName);
+                    Console.Clear();
+                    
+                    List<string> history = msg.GetGroupMessages(user, groupName);
+                    foreach (var line in history) { Console.WriteLine(line); }
                     Console.WriteLine("Commands: u - update, w - write message, q - quit chat");
                     Console.Write("{0}: ", user.Login);
                     string answer = Console.ReadLine();
@@ -212,6 +225,7 @@ namespace FinalExam.Services
                     if (answer == "w") { Console.Write("{0}: ", user.Login); string mssg = Console.ReadLine(); msg.SendGroupMessage(user, mssg, grps.GetGroupId(groupName)); GroupChatMenu(user, groupName); }
                     if (answer == "q") { Console.Clear(); MessagesMenu(user); }
                 }
+                MessagesMenu(user);
             }
             catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: {0}", ex.Message); }
         }
