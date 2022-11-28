@@ -131,54 +131,42 @@ namespace FinalExam.Services
             try
             {
                 Messages msg = new();
-                Console.Clear();
-                int flag = 1;
                 List<User> users = msg.GetActiveUsersList();
                 List<Group> groups = msg.CheckUsersGroupsList(user);
-                
-                if (users != null)
-                {
-                    Console.WriteLine("Private chats: ");
-                    foreach (var item in users)
-                    {
-                        Console.WriteLine("{0}. {1}", flag, item.Login);
-                        flag++;
-                    }
-                }
 
-                if (groups != null)
+                Console.Clear();
+                Console.WriteLine("Private Chats: ");
+                Console.WriteLine("--------------");
+                int list_counter = 0, user_counter = 0, group_counter = 0;
+                foreach (var item in users) { Console.WriteLine("{0}. {1}", list_counter, item.Login); list_counter++; user_counter++; }
+                Console.WriteLine("");
+                Console.WriteLine("Group Chats: ");
+                Console.WriteLine("--------------");
+                foreach (var item in groups) {Console.WriteLine("{0}. {1}", list_counter, item.Name); list_counter++; group_counter++; }
+                
+                int answer = 0; Console.WriteLine("{0}:", user.Login); answer = Console.Read();
+
+                if(answer <= user_counter)
                 {
-                    Console.WriteLine("Groups: ");
-                    foreach (var item in groups)
+                    for (int i = 0; i <= user_counter; i++)
                     {
-                        Console.WriteLine("{0}. {1}", flag, item.Name);
-                        flag++;
+                        if (i == answer)
+                        {
+                            ChatMenu(user, users[i]);
+                        }
                     }
                 }
-                Console.WriteLine("0. Exit");
-                Console.Write("{0}: ", user.Login); int setFlag = Console.Read();
-                if(setFlag == 0) { MessagesMenu(user); }
                 else
                 {
-                    int flag2 = 1, flag3 = 0;
-                    foreach (var item in users)
+                    for (int i = 0; i <= group_counter; i++)
                     {
-                        if (flag2 == setFlag)
+                        if (i == answer-user_counter)
                         {
-                            ChatMenu(user, item);
+                            GroupChatMenu(user, groups[i].Name);
                         }
-                        else { flag2++; }
-                    }
-                    flag3 = flag2;
-                    foreach (var item in groups)
-                    {
-                        if (flag2 == setFlag)
-                        {
-                            GroupChatMenu(user, item.Name);
-                        }
-                        else { flag2++; }
                     }
                 }
+                
             }
             catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: messages menu {0}", ex.Message); }
         }
