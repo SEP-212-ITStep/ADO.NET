@@ -20,7 +20,7 @@ namespace FinalDb
 {
     internal class Program
     {
-        const string ConnectionString = "Server=DESKTOP-6O1ENUJ;Database=ChatDb;Trusted_Connection=true;Encrypt=false";
+        const string ConnectionString = "Server=185.213.156.185;Database=ChatDb;User Id=student;Password=123;Encrypt=false;Application Name=Jacob";
         static void Main(string[] args)
         {
             MenuService.externalMenu();

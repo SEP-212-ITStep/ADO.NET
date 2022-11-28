@@ -40,9 +40,12 @@ namespace Issakov_Jacob_Final_Exam.Services
         public static void internalMenu()
         {
             Console.WriteLine("Select menu item:");
+            Console.WriteLine("0. Invite user: ");
             Console.WriteLine("1. Create Group: ");
             Console.WriteLine("2. Delete Group: ");
             Console.WriteLine("3. Private Messages Actions: ");
+            Console.WriteLine("4. Write in Group: ");
+            Console.WriteLine("5. Get Group Message History: ");
             Console.WriteLine("9. Get Message History: ");
             Console.WriteLine("6. Add User to BlackList: ");
             Console.WriteLine("7. Show all Users: ");
@@ -51,14 +54,23 @@ namespace Issakov_Jacob_Final_Exam.Services
             int ch = Int32.Parse(Console.ReadLine());
             switch (ch)
             {
-                case 1:
+                case 0:
+                    UserService.ShowAllUsers();
                     Console.WriteLine("Enter your id: ");
                     int id = int.Parse(Console.ReadLine());
+                    GroupService.ShowAllGroups();
+                    Console.WriteLine("Enter your group name: ");
+                    string groupName = Console.ReadLine();
+                    GroupService.InviteUser(id, groupName);
+                    break;
+                case 1:
+                    Console.WriteLine("Enter your id: ");
+                    id = int.Parse(Console.ReadLine());
                     GroupService.CreateGroup(id);
                     break;
                 case 2:
                     Console.WriteLine("Enter group Name: ");
-                    string groupName = Console.ReadLine();
+                    groupName = Console.ReadLine();
                     GroupService.DeleteGroup(groupName);
                     break;
                 case 3:
@@ -99,11 +111,41 @@ namespace Issakov_Jacob_Final_Exam.Services
                         }
                     } while (ch != 0);
                     break;
+                case 4:
+                    GroupService.WriteInGroup();
+                    break;
+                case 5:
+                    GroupService.ShowAllGroups();
+                    bool temp = true;
+                    do
+                    {
+                        Console.WriteLine("Enter group id: ");
+                        int groupId = int.Parse(Console.ReadLine());
+                        MessagesService.ShowGroupMessages(groupId);
+                        Thread.Sleep(10000);
+                        Console.WriteLine("Continue watch message history? (yes or no)");
+                        string answer = Console.ReadLine();
+                        MessagesService.ShowGroupMessages(groupId);
+
+                        if (answer == "no")
+                        {
+                            temp = false;
+                        }
+                    } while (temp == true);
+                    internalMenu();
+                    break;
                 case 6:
                     GroupService.AddToBlackList();
                     break;
+                case 7:
+                    UserService.ShowAllUsers();
+                    break;
+                case 8:
+                    GroupService.ShowAllGroups();
+                    break;
                 case 9:
-                    bool temp = true;
+                    UserService.ShowAllUsers();
+                    temp = true;
                     do
                     {
                         Console.WriteLine("Enter from id: ");

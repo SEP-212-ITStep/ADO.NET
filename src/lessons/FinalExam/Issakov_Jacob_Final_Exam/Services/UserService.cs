@@ -13,7 +13,6 @@ namespace Issakov_Jacob_Final_Exam.Services
 {
     public class UserService
     {
-        const string ConnectionString = "Server=DESKTOP-6O1ENUJ;Database=ChatDb;Trusted_Connection=true;Encrypt=false";
         public static void Registration(ChatDbContext db)
         {
             try
@@ -61,7 +60,7 @@ namespace Issakov_Jacob_Final_Exam.Services
             try
             {
                 const string SqlQuery = "SELECT [login], [password] FROM dbo.Users WHERE login = @Login";
-                using var SqlConnection = new SqlConnection(ConnectionString);
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.connectionString);
                 SqlConnection.Open();
                 SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
                 cmd.Parameters.Add("Login", SqlDbType.VarChar, 500).Value = login;
@@ -89,7 +88,7 @@ namespace Issakov_Jacob_Final_Exam.Services
             try
             {
                 string sqlQuery = $"SELECT * FROM Users";
-                using var SqlConnection = new SqlConnection(ConnectionString);
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.connectionString);
                 SqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand(sqlQuery, SqlConnection);
                 var reader = sqlCommand.ExecuteReader();

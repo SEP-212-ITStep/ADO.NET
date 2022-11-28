@@ -1,4 +1,5 @@
 ﻿using Issakov_Jacob_Final_Exam.Data;
+using Issakov_Jacob_Final_Exam.Models;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,6 @@ namespace Issakov_Jacob_Final_Exam.Services
 {
     public class GroupService
     {
-        const string ConnectionString = "Server=DESKTOP-6O1ENUJ;Database=ChatDb;Trusted_Connection=true;Encrypt=false";
         public static void AddToBlackList()
         {
             try
@@ -49,7 +49,7 @@ namespace Issakov_Jacob_Final_Exam.Services
             {
                 int result = new();
                 const string SqlQuery = "SELECT id FROM dbo.Groups WHERE name = @groupName";
-                using var SqlConnection = new SqlConnection(ConnectionString);
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.connectionString);
                 SqlConnection.Open();
                 SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
                 cmd.Parameters.AddWithValue("@groupName", GroupName);
@@ -84,13 +84,10 @@ namespace Issakov_Jacob_Final_Exam.Services
                 }
                 GroupService service = new GroupService();
                 string sqlQuery2 = string.Format($"INSERT INTO Groups (name, owner_id) VALUES ('{groupName}', {id})");
-                string sqlQuery3 = string.Format($"INSERT UserGroups (group_id, user_id) VALUES ({service.GetGroupId(groupName)}, {id})");
-                using var SqlConnection = new SqlConnection(ConnectionString);
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.connectionString);
                 SqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand(sqlQuery2, SqlConnection);
-                SqlCommand sqlCommand2 = new SqlCommand(sqlQuery3, SqlConnection);
                 sqlCommand.ExecuteNonQuery();
-                sqlCommand2.ExecuteNonQuery();
             }
             catch (Exception)
             {
@@ -106,13 +103,10 @@ namespace Issakov_Jacob_Final_Exam.Services
             {
                 GroupService service = new GroupService();
                 string sqlQuery2 = string.Format($"DELETE FROM Groups WHERE Name='{groupName}'");
-                string sqlQuery3 = string.Format($"DELETE FROM UserGroups WHERE group_id={service.GetGroupId(groupName)}");
-                using var SqlConnection = new SqlConnection(ConnectionString);
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.connectionString);
                 SqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand(sqlQuery2, SqlConnection);
-                SqlCommand sqlCommand2 = new SqlCommand(sqlQuery3, SqlConnection);
                 sqlCommand.ExecuteNonQuery();
-                sqlCommand2.ExecuteNonQuery();
             }
             catch (Exception)
             {
@@ -127,7 +121,7 @@ namespace Issakov_Jacob_Final_Exam.Services
             {
                 GroupService service = new GroupService();
                 string sqlQuery3 = string.Format($"INSERT UserGroups (group_id, user_id) VALUES ({service.GetGroupId(groupName)}, {id})");
-                using var SqlConnection = new SqlConnection(ConnectionString);
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.connectionString);
                 SqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand(sqlQuery3, SqlConnection);
                 sqlCommand.ExecuteNonQuery();
@@ -143,7 +137,7 @@ namespace Issakov_Jacob_Final_Exam.Services
             try
             {
                 string sqlQuery = $"SELECT * FROM Groups";
-                using var SqlConnection = new SqlConnection(ConnectionString);
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.connectionString);
                 SqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand(sqlQuery, SqlConnection);
                 var reader = sqlCommand.ExecuteReader();
@@ -159,6 +153,40 @@ namespace Issakov_Jacob_Final_Exam.Services
             {
                 Console.WriteLine(e.Message);
             }
+        }
+        public static void WriteInGroup()
+        {
+            UserService.ShowAllUsers();
+            Console.WriteLine("Enter your id: ");
+            int id = int.Parse(Console.ReadLine()); 
+            GroupService.ShowAllGroups();
+            Console.WriteLine("Enter the group name where you want to chat some: ");
+            string groupName = Console.ReadLine();
+            using var db = new ChatDbContext();
+            var groups = db.Groups.ToList();
+            bool status = false;
+            foreach (var gru in groups)
+            {
+                if (gru.Name == groupName)
+                {
+                    status = true;
+                }
+            }
+            if (status == true)
+            {
+                Console.WriteLine("Enter Message Text: ");
+                string messageText = Console.ReadLine();
+                GroupService service = new GroupService();
+                GroupMessage groupMessage = new GroupMessage();
+                groupMessage.GroupId = service.GetGroupId(groupName);
+                groupMessage.UserId = id;
+                groupMessage.CreateDate = DateTime.Now;
+                groupMessage.Message = messageText;
+                db.GroupMessages.Add(groupMessage);
+                db.SaveChanges();
+                Console.WriteLine("The mwssage was sent");
+            }
+
         }
     }
 }

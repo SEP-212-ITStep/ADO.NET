@@ -13,7 +13,6 @@ namespace Issakov_Jacob_Final_Exam.Services
 
     public class MessagesService
     {
-        const string ConnectionString = "Server=DESKTOP-6O1ENUJ;Database=ChatDb;Trusted_Connection=true;Encrypt=false";
         public static void WritePrivateMessage(int fromUserId)
         {
             try
@@ -200,7 +199,7 @@ namespace Issakov_Jacob_Final_Exam.Services
             try
             {
                 string sqlQuery = $"SELECT * FROM PrivateMessages WHERE from_user_id={fromUserId} AND to_user_id={destinationId}";
-                using var SqlConnection = new SqlConnection(ConnectionString);
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.connectionString);
                 SqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand(sqlQuery, SqlConnection);
                 var reader = sqlCommand.ExecuteReader();
@@ -213,6 +212,31 @@ namespace Issakov_Jacob_Final_Exam.Services
                     var createDate = reader["create_date"].ToString();
                     Console.WriteLine($"\nMessage Id: {messageId}\t\t\tCreation Date: {createDate}\nFrom Id: {fromId}\t\t\t" +
                                       $"To Id: {toId}\nMessage Text: {messageText}\n-------------------------");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+        public static void ShowGroupMessages(int groupId)
+        {
+            try
+            {
+                string sqlQuery = $"SELECT * FROM GroupMessages WHERE group_id={groupId}";
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.connectionString);
+                SqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand(sqlQuery, SqlConnection);
+                var reader = sqlCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    var messageId = reader["Id"].ToString();
+                    var groupId2 = reader["group_id"].ToString();
+                    var userId = reader["user_id"].ToString();
+                    var createDate = reader["create_date"].ToString();
+                    var messageText = reader["message"].ToString(); 
+                    Console.WriteLine($"\nMessage Id: {messageId}\t\t\tCreation Date: {createDate}\nFrom Id: {userId}\t\t\t" +
+                                      $"To Group Id: {groupId2}\nMessage Text: {messageText}\n-------------------------");
                 }
             }
             catch (Exception e)
