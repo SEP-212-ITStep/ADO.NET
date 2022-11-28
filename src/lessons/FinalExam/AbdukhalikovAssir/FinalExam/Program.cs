@@ -10,7 +10,6 @@ namespace FinalExam
         
         static void Main(string[] args)
         {
-            label1:
             Menu start = new();
             start.AuthMenu();
         }

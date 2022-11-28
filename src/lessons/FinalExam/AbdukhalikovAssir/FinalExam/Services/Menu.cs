@@ -60,9 +60,12 @@ namespace FinalExam.Services
                 Console.Clear();
                 Console.WriteLine("1. Messages");
                 Console.WriteLine("2. Create group");
-                Console.WriteLine("3. Block user");
+                Console.WriteLine("3. Add User to a Group");
+                Console.WriteLine("4. Block user");
                 Console.WriteLine("0. Log out");
+
                 Console.Write("{0}: ", user.Login);
+                
                 int ch = int.Parse(Console.ReadLine());
                 switch (ch)
                 {
@@ -77,12 +80,51 @@ namespace FinalExam.Services
                         UserMenu(user);
                         break;
                     case 3:
+                        Console.Clear();
+                        
                         break;
                     case 0:
                         AuthMenu();
                         break;
                 }
             }
+        }
+        public void AddUser(User user)
+        {
+            try
+            {
+                if (user != null) { }
+                Console.WriteLine("Select the group: ");
+                Messages msg = new(); Groups grps = new(); User nurik = new();
+                List<Group> groups = msg.CheckUsersGroupsList(user);
+                int k = 0, k1 = 0; int tmp_user_id = 0, tmp_group_id = 0;
+                foreach (var item in groups)
+                {
+                    Console.WriteLine("{0}. {1}", k, item.Name);
+                    k++;
+                }
+                Console.WriteLine("Select group");
+                Console.Write("{0}: ", user.Login); int answer = Console.Read();
+
+                foreach (var item in groups)
+                {
+                    if (k1 == answer)
+                    {
+                        tmp_group_id = item.Id;
+                    }
+                    k1++;
+                }
+                List<string> users = msg.GetActiveUsers(); int user_counter = 0;
+                foreach(var item in users)
+                {
+                    Console.WriteLine("{0}. {1}", user_counter, item);
+                    user_counter++;
+                }
+
+                grps.AddUserToAGroup(nurik, grps.GetGroupName(user, tmp_group_id));
+                UserMenu(user);
+            }
+            catch(Exception e) { Console.WriteLine("Error: {0}", e.Message);}
         }
         public void MessagesMenu(User user)
         {
@@ -91,40 +133,51 @@ namespace FinalExam.Services
                 Messages msg = new();
                 Console.Clear();
                 int flag = 1;
-                List<Chat> chats = new List<Chat>();
                 List<User> users = msg.GetActiveUsersList();
                 List<Group> groups = msg.CheckUsersGroupsList(user);
-                Console.WriteLine("Private chats: ");
-                foreach (var item in users)
-                {
-                    Console.WriteLine("{0}. {1}", flag, item.Login);
-                    flag++;
-                }
-                Console.WriteLine("Groups: ");
-                foreach (var item in groups)
-                {
-                    Console.WriteLine("{0}. {1}", flag, item.Name);
-                    flag++;
-                }
                 
+                if (users != null)
+                {
+                    Console.WriteLine("Private chats: ");
+                    foreach (var item in users)
+                    {
+                        Console.WriteLine("{0}. {1}", flag, item.Login);
+                        flag++;
+                    }
+                }
+
+                if (groups != null)
+                {
+                    Console.WriteLine("Groups: ");
+                    foreach (var item in groups)
+                    {
+                        Console.WriteLine("{0}. {1}", flag, item.Name);
+                        flag++;
+                    }
+                }
+                Console.WriteLine("0. Exit");
                 Console.Write("{0}: ", user.Login); int setFlag = Console.Read();
-                
-                int flag2 = 1;
-                foreach (var item in users)
+                if(setFlag == 0) { MessagesMenu(user); }
+                else
                 {
-                    if (flag2 == setFlag)
+                    int flag2 = 1, flag3 = 0;
+                    foreach (var item in users)
                     {
-                        ChatMenu(user, item);
+                        if (flag2 == setFlag)
+                        {
+                            ChatMenu(user, item);
+                        }
+                        else { flag2++; }
                     }
-                    else { flag2++; }
-                }
-                foreach (var item in groups)
-                {
-                    if (flag2 == setFlag)
+                    flag3 = flag2;
+                    foreach (var item in groups)
                     {
-                        GroupChatMenu(user, item.Name);
+                        if (flag2 == setFlag)
+                        {
+                            GroupChatMenu(user, item.Name);
+                        }
+                        else { flag2++; }
                     }
-                    else { flag2++; }
                 }
             }
             catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: messages menu {0}", ex.Message); }
@@ -133,6 +186,7 @@ namespace FinalExam.Services
         {
             try
             {
+                Console.WriteLine("hello");
                 Messages msg = new();
                 string Comnd = "";
                 while (Comnd != "q" || Comnd != "w")
@@ -153,7 +207,25 @@ namespace FinalExam.Services
         }
         public void GroupChatMenu(User user, string groupName)
         {
-
+            try
+            {
+                Messages msg = new(); Groups grps = new Groups();
+                string Comnd = "";
+                while (Comnd != "q" || Comnd != "w")
+                {
+                    msg.GetGroupMessages(user, groupName);
+                    Console.WriteLine("Commands: u - update, w - write message, q - quit chat");
+                    Console.Write("{0}: ", user.Login);
+                    string answer = Console.ReadLine();
+                    if (answer == "u")
+                    {
+                        GroupChatMenu(user, groupName);
+                    }
+                    if (answer == "w") { Console.Write("{0}: ", user.Login); string mssg = Console.ReadLine(); msg.SendGroupMessage(user, mssg, grps.GetGroupId(groupName)); GroupChatMenu(user, groupName); }
+                    if (answer == "q") { Console.Clear(); MessagesMenu(user); }
+                }
+            }
+            catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: {0}", ex.Message); }
         }
     }
 }

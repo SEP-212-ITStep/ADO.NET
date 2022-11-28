@@ -83,7 +83,7 @@ namespace FinalExam.Services
             try
             {
                 List<Group> groups = new List<Group>();
-                const string SqlQuery = "SELECT Groups.id, Groups.name FROM UserGroups JOIN Groups ON UserGroups.group_id = Groups.id WHERE user_id = @user_id;";
+                const string SqlQuery = "SELECT Groups.id, Groups.name, Groups.owner_id FROM UserGroups JOIN Groups ON UserGroups.group_id = Groups.id WHERE user_id = @user_id;";
                 using (SqlConnection connection = new SqlConnection(ConnectionStringProvider.ConnectionString))
                 {
                     connection.Open();
@@ -93,20 +93,14 @@ namespace FinalExam.Services
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        int id = new();
-                        string groupName = new("");
-                        int ownerId = new();
-                        id = reader.GetInt32(0);
-                        groupName = reader.GetString(1);
-                        ownerId = reader.GetInt32(2);
                         Group tmp = new();
-                        tmp.Id = id;
-                        tmp.Name = groupName;
-                        tmp.OwnerId = ownerId;
+                        tmp.Id = reader.GetInt32(0);
+                        tmp.Name = reader.GetString(1);
+                        tmp.OwnerId = reader.GetInt32(2);
                         groups.Add(tmp);
                     }
-                    return groups;
                 }
+                return groups;
             }
             catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: checking groups {0}", ex.Message); return null; }
         }
@@ -269,6 +263,28 @@ namespace FinalExam.Services
             }
             catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: getting private messages, {0}", ex.Message); return null; }
         }
+        public List<string> GetGroupMessages(User user, string groupName)
+        {
+            try
+            {
+                List<string> groupMessages = new();
+                const string SqlQuery = "SELECT login, message, create_date FROM GroupMessages JOIN Groups ON GroupMessages.group_id = Groups.id JOIN Users ON GroupMessages.user_id = Users.id WHERE name = @groupName;";
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
+                SqlConnection.Open();
+                SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
+                cmd.Parameters.AddWithValue("@name", groupName);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string message = "";
+                    message += reader.GetString(0) + " ";
+                    message += reader.GetString(1) + " ";
+                    message += reader.GetDateTime(3).ToString() + " ";
+                }
+                return groupMessages;
+            }
+            catch(Exception ex) {Console.WriteLine("Error: {0}", ex.Message); return null; }
+        }
         public User GetUserById(int user_id)
         {
             try
@@ -290,25 +306,5 @@ namespace FinalExam.Services
             }
             catch (Exception ex) { Console.WriteLine(); Console.WriteLine("Error: getting user from db, {0}", ex.Message); return null; }
         }
-        /*public List<string> GetGroupMessages(User user, int group_id)
-        {
-            try
-            {
-                List<string> messages = new List<string>();
-                const string SqlQuery = "select Groups.name, Users.login, GroupMessages.create_date, GroupMessages.message from GroupMessages JOIN Users ON GroupMessages.user_id = Users.id JOIN Groups ON Groups.id = GroupMessages.group_id;";
-                using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
-                SqlConnection.Open();
-                SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    string user = new string("");
-                    user = reader.GetString(0);
-                    Users.Add(user);
-                }
-                return messages;
-            }
-            catch (Exception ex) { Console.WriteLine("Error: getting group messages, {0}", ex.Message); }
-        }*/
     }
 }

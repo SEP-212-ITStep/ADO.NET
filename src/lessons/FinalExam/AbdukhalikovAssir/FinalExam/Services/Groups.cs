@@ -54,6 +54,26 @@ namespace FinalExam.Services
             catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: Getting Group Id {0}", ex.Message); return 0; }
         }
 
+        public string GetGroupName(User user, int id)
+        {
+            try
+            {
+                string result = new string("");
+                const string SqlQuery = "SELECT name FROM dbo.Groups WHERE id = @groupName";
+                using var SqlConnection = new SqlConnection(ConnectionStringProvider.ConnectionString);
+                SqlConnection.Open();
+                SqlCommand cmd = new SqlCommand(SqlQuery, SqlConnection);
+                cmd.Parameters.AddWithValue("@groupName", id);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    result = reader.GetString(0);
+                }
+                return result;
+            }
+            catch (Exception ex) { Console.Clear(); Console.WriteLine("Error: Getting Group Id {0}", ex.Message); return ""; }
+        }
+
         public bool CreateGroup(User creator, string groupName)
         {
             try
@@ -144,7 +164,7 @@ namespace FinalExam.Services
                 }
                 else { return false; }
             }
-            catch(Exception ex) { Console.Clear(); Console.WriteLine("Error: cheching groups contain user"); Thread.Sleep(5000); return true; }
+            catch(Exception ex) { Console.Clear(); Console.WriteLine("Error: cheching groups contain user, {0}", ex.Message); Thread.Sleep(5000); return true; }
         }
     }
 }
