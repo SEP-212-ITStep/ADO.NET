@@ -65,7 +65,6 @@ namespace Issakov_Jacob_Final_Exam.Services
         public static void CreateGroup(int id)
         {
             Console.WriteLine("Enter Group Name");
-            // добавить в 2 группы
             string groupName = Console.ReadLine();
             try
             {
@@ -95,10 +94,9 @@ namespace Issakov_Jacob_Final_Exam.Services
                 Console.WriteLine("Подключение к базе прошло не успешно");
             }
 
-        }// не уверен, что правильно сделал
+        }
         public static void DeleteGroup(string groupName)
         {
-            // удалить из 2 групп
             try
             {
                 GroupService service = new GroupService();
@@ -113,7 +111,7 @@ namespace Issakov_Jacob_Final_Exam.Services
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.WriteLine("Подключение к базе прошло не успешно");
             }
-        }// не уверен, что правильно сделал
+        }
         public static void InviteUser(int id, string groupName)
         {
             // добавить только в user group
@@ -131,7 +129,7 @@ namespace Issakov_Jacob_Final_Exam.Services
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.WriteLine("Подключение к базе прошло не успешно");
             }
-        }// не уверен, что правильно сделал
+        }
         public static void ShowAllGroups()
         {
             try
