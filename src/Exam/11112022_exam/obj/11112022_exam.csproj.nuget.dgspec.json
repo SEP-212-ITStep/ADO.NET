@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\Exam\\11112022_exam\\11112022_exam.csproj": {}
+    "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\Exam\\11112022_exam\\11112022_exam.csproj": {}
   },
   "projects": {
-    "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\Exam\\11112022_exam\\11112022_exam.csproj": {
+    "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\Exam\\11112022_exam\\11112022_exam.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\Exam\\11112022_exam\\11112022_exam.csproj",
+        "projectUniqueName": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\Exam\\11112022_exam\\11112022_exam.csproj",
         "projectName": "11112022_exam",
-        "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\Exam\\11112022_exam\\11112022_exam.csproj",
+        "projectPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\Exam\\11112022_exam\\11112022_exam.csproj",
         "packagesPath": "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\Exam\\11112022_exam\\obj\\",
+        "outputPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\Exam\\11112022_exam\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\timur.azhiguzhayev\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

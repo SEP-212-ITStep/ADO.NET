@@ -2602,11 +2602,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\lessons\\Lesson_7\\18112022_lesson_Dapper\\18112022_lesson_Dapper.csproj",
+      "projectUniqueName": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\lessons\\Lesson_7\\18112022_lesson_Dapper\\18112022_lesson_Dapper.csproj",
       "projectName": "18112022_lesson_Dapper",
-      "projectPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\lessons\\Lesson_7\\18112022_lesson_Dapper\\18112022_lesson_Dapper.csproj",
+      "projectPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\lessons\\Lesson_7\\18112022_lesson_Dapper\\18112022_lesson_Dapper.csproj",
       "packagesPath": "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\lessons\\Lesson_7\\18112022_lesson_Dapper\\obj\\",
+      "outputPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\lessons\\Lesson_7\\18112022_lesson_Dapper\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\timur.azhiguzhayev\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2660,7 +2660,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

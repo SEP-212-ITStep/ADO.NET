@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8hYUmbNsj99mgs/9PZr81ACjY4mbhmTOXigS05NT2msQfKpZLVDyLxQiOMf0IClnfaH9bw8JD0fW1m6sGM6scA==",
+  "dgSpecHash": "SWSz14IjOj1GQhAUJUrpdtFMCy1Cp+Y+ynIhvxEcKI85NgPldYW/ym/3tuMWSL8A/95j+r/hAtXCDIiQAKOoSw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\lessons\\Lesson_7\\18112022_lesson_Dapper\\18112022_lesson_Dapper.csproj",
+  "projectFilePath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\lessons\\Lesson_7\\18112022_lesson_Dapper\\18112022_lesson_Dapper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -17,7 +17,7 @@
       "projectName": "Lesson_1_ConApp",
       "projectPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\lessons\\Lesson_1\\Lesson_1_ConApp\\Lesson_1_ConApp.csproj",
       "packagesPath": "C:\\Users\\timur.azhiguzhayev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\timur.azhiguzhayev\\source\\repos\\ADO.NET\\src\\lessons\\Lesson_1\\Lesson_1_ConApp\\obj\\",
+      "outputPath": "C:\\Users\\timur.azhiguzhayev\\Source\\Repos\\ADO.NET\\src\\lessons\\Lesson_1\\Lesson_1_ConApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\timur.azhiguzhayev\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
